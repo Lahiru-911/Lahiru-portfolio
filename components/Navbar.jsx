@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Navbar */}
-      <nav className="bg-[#121212] border-b border-gray-700">
+      <nav className="bg-[#2b2a2a] border-b border-gray-700">
         <div className="max-w-screen-2xl mx-auto flex items-center justify-between p-2 text-white">
           {/* Contact Info */}
           <div className="flex items-center space-x-3 text-sm">
@@ -57,6 +57,11 @@ const Navbar = () => {
                 className="hover:text-blue-700 transition"
               />
             </a>
+            <Link href="/">
+              <button className="relative p-1 rounded-full bg-white text-[#0081FB] isolation-auto z-10 border-2 border-[#0081FB] before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-[#0081FB] before:transition-all before:duration-700 before:hover:w-full before:z-[-1] hover:text-white before:hover:rounded-full before:rounded-full overflow-hidden transition-all duration-500 ease-in-out text-xs sm:text-xs md:text-xs lg:text-sm xl:text-lg 2xl:text-base font-inter font-normal">
+                Contact Info
+              </button>
+            </Link>
           </div>
         </div>
       </nav>
