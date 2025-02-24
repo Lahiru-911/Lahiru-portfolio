@@ -1,56 +1,60 @@
 "use client";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   FaFacebookF,
   FaWhatsapp,
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import Fab from "@mui/material/Fab";
+import AddIcon from "@mui/icons-material/Add";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function SocialMediaIcons() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-1/3 right-0 flex flex-col items-center gap-2 p-2 z-50">
-      {/* Social Icons Container */}
-      <div
-        className={`flex flex-col items-center transition-all duration-300 ${
-          isOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-        }`}
+    <div className="fixed top-1/3 right-4 flex flex-col items-center gap-3 z-50">
+      {/* Social Icons - Smooth Animation */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? 0 : 50 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="flex flex-col items-center gap-3"
       >
-        <a
-          href="#"
-          className="bg-gray-900 text-white p-2 rounded-full hover:bg-blue-500 transition-all"
-        >
-          <FaFacebookF size={20} />
-        </a>
-        <a
-          href="#"
-          className="bg-gray-900 text-white p-2 rounded-full hover:bg-green-500 transition-all"
-        >
-          <FaWhatsapp size={20} />
-        </a>
-        <a
-          href="#"
-          className="bg-gray-900 text-white p-2 rounded-full hover:bg-pink-500 transition-all"
-        >
-          <FaInstagram size={20} />
-        </a>
-        <a
-          href="#"
-          className="bg-gray-900 text-white p-2 rounded-full hover:bg-blue-700 transition-all"
-        >
-          <FaLinkedinIn size={20} />
-        </a>
-      </div>
+        {[
+          { icon: <FaFacebookF />, color: "bg-blue-600", link: "#" },
+          { icon: <FaWhatsapp />, color: "bg-green-500", link: "#" },
+          { icon: <FaInstagram />, color: "bg-pink-500", link: "#" },
+          { icon: <FaLinkedinIn />, color: "bg-blue-700", link: "#" },
+        ].map((item, index) => (
+          <motion.a
+            key={index}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className={`p-3 rounded-full shadow-lg text-white ${item.color} transition-all duration-300 hover:shadow-2xl`}
+          >
+            {item.icon}
+          </motion.a>
+        ))}
+      </motion.div>
 
-      {/* Toggle Button */}
-      <button
-        className="bg-gray-700 text-white p-2 rounded-l-lg shadow-lg hover:bg-gray-900 transition-all"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? "❌" : "📢"}
-      </button>
+      {/* Floating Action Button (FAB) */}
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+        <Fab
+          size="medium"
+          color="primary"
+          aria-label="toggle"
+          className="shadow-xl backdrop-blur-md bg-opacity-70"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <CloseIcon /> : <AddIcon />}
+        </Fab>
+      </motion.div>
     </div>
   );
 }
