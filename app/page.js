@@ -4,6 +4,7 @@ import React from "react";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import HeroSection from "@/components/HeroSection";
+import WordsMarquee from "@/components/WordsMarquee/page";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       <HeroSection/>
       <SocialMediaIcons />
      
-      
+      <WordsMarquee/>
 
     
 
