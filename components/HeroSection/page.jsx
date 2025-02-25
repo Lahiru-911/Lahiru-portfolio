@@ -1,9 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
+import MagnetButton from "../MagnetButton/page";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <div className="relative min-h-screen bg-gray-300 flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen rounded-b-3xl shadow-2xl ring-1 ring-gray-900/10 bg-gray-300 flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="hidden md:block absolute   ">
         <motion.img
@@ -28,7 +30,9 @@ export default function HeroSection() {
           Contact
         </a>
       </nav>
-
+      <Link href={"/contact"}>
+        <MagnetButton />
+      </Link>
       {/* Text Content */}
       <div className="absolute right-10 text-center md:text-left text-black max-w-xl">
         <motion.h1
@@ -37,7 +41,7 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
           className="text-6xl md:text-9xl font-bold tracking-tight"
         >
-          LAHIRU KAVINDA
+          Hi, I'M LAHIRU KAVINDA
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +49,7 @@ export default function HeroSection() {
           transition={{ delay: 0.5, duration: 1 }}
           className="text-2xl md:text-4xl font-light  mt-4"
         >
-          Freelance Designer & Developer
+          Software Engineer & Web Developer
         </motion.p>
       </div>
 

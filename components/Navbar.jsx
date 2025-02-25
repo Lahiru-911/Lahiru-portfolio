@@ -86,7 +86,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex space-x-8 text-gray-900 font-medium">
-            {[{ name: "About Me", path: "/about" }, { name: "Projects", path: "/projects" }, { name: "Contact", path: "/contact" }].map((item) => (
+            {[{ name: "About Me", path: "/" }, { name: "Projects", path: "/projects" }, { name: "Contact", path: "/contact" }].map((item) => (
               <li key={item.name}>
                 <Link
                   href={item.path}
@@ -107,7 +107,7 @@ const Navbar = () => {
               </button>
               {isDropdownOpen && (
                 <ul className="absolute text-gray-900 bg-white shadow-md space-y-4 p-2 mt-2">
-                  {[{ name: "Skills", path: "/skills" }, { name: "Experience", path: "/experience" }, { name: "Education", path: "/education" }, { name: "Blog", path: "/blog" }].map((item) => (
+                  {[{ name: "Skills", path: "/allthree" }, { name: "Experience", path: "/allthree" }, { name: "Education", path: "/allthree" }, { name: "Blog", path: "/blog" }].map((item) => (
                     <li key={item.name}>
                       <Link
                         href={item.path}
