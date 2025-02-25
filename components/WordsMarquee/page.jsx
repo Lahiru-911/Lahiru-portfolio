@@ -41,7 +41,7 @@ const WordsMarquee = () => {
         autoFill={true}
       >
         <h1 className="text-[#0081FB] mx-1 sm:mx-2 md:mx-3 lg:mx-4 xl:mx-6 2xl:mx-8 font-inter font-semibold text-5xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[11rem] 2xl:text-[14rem]">
-          Unlock your vision with us .
+        Your Vision, My Code .
         </h1>
       </Marquee>
     </div>
