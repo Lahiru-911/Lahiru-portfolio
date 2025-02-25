@@ -9,23 +9,33 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
     <>
       {/* Top Navbar */}
-      <nav className="bg-[#2b2a2a] border-b border-gray-700">
+      <nav className="bg-[#323235] border-b border-gray-700">
         <div className="max-w-screen-2xl mx-auto flex items-center justify-between p-2 text-white">
           {/* Contact Info */}
           <div className="flex items-center space-x-3 text-sm">
             <a
               href="mailto:lahiruxk@gmail.com"
-              className="hover:underline hover:text-blue-500"
+              className="hover:underline hover:text-[#8075ff]"
             >
               lahiruxk@gmail.com |
             </a>
             <a
               href="tel:+94775788667"
-              className="hover:underline hover:text-blue-500"
+              className="hover:underline hover:text-[#8075ff]"
             >
               +94 77 578 8667
             </a>
@@ -58,8 +68,8 @@ const Navbar = () => {
               />
             </a>
             <Link href="/">
-              <button className="relative p-1 rounded-full bg-white text-[#0081FB] isolation-auto z-10 border-2 border-[#0081FB] before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-[#0081FB] before:transition-all before:duration-700 before:hover:w-full before:z-[-1] hover:text-white before:hover:rounded-full before:rounded-full overflow-hidden transition-all duration-500 ease-in-out text-xs sm:text-xs md:text-xs lg:text-sm xl:text-lg 2xl:text-base font-inter font-normal">
-                Contact Info
+              <button className="relative px-1  rounded-full bg-white text-[#8075ff] isolation-auto z-10 border-2 border-[#8075ff] before:absolute before:top-0 before:left-0 before:h-full before:w-0 before:bg-[#8075ff] before:transition-all before:duration-700 before:hover:w-full before:z-[-1] hover:text-white before:hover:rounded-full before:rounded-full overflow-hidden transition-all duration-500 ease-in-out text-xs sm:text-xs md:text-xs lg:text-sm xl:text-lg 2xl:text-sm font-inter font-normal">
+                +Contact Info
               </button>
             </Link>
           </div>
@@ -76,12 +86,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex space-x-8 text-gray-900 font-medium">
-            {[
-              { name: "Home", path: "/" },
-              { name: "Company", path: "/company" },
-              { name: "Team", path: "/team" },
-              { name: "Features", path: "/features" },
-            ].map((item) => (
+            {[{ name: "About Me", path: "/about" }, { name: "Projects", path: "/projects" }, { name: "Contact", path: "/contact" }].map((item) => (
               <li key={item.name}>
                 <Link
                   href={item.path}
@@ -91,43 +96,62 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+
+            {/* Dropdown Menu */}
+            <li className="relative">
+              <button
+                className="hover:text-blue-600 font-medium transition"
+                onClick={toggleDropdown}
+              >
+                More ▼
+              </button>
+              {isDropdownOpen && (
+                <ul className="absolute text-gray-900 bg-white shadow-md space-y-4 p-2 mt-2">
+                  {[{ name: "Skills", path: "/skills" }, { name: "Experience", path: "/experience" }, { name: "Education", path: "/education" }, { name: "Blog", path: "/blog" }].map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.path}
+                        className="block py-2 hover:text-blue-600 hover:underline transition"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
           </ul>
 
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-gray-900"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggleSidebar}
           >
-            {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+            {isSidebarOpen ? <FiX size={28} /> : <FiMenu size={28} />}
           </button>
         </div>
-
-        {/* Mobile Menu (Slide Down) */}
-        <div
-          className={`md:hidden transition-transform transform ${
-            isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-          } overflow-hidden bg-gray-100 shadow-md`}
-        >
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-900 font-medium">
-            {[
-              { name: "Home", path: "/" },
-              { name: "Company", path: "/company" },
-              { name: "Team", path: "/team" },
-              { name: "Features", path: "/features" },
-            ].map((item) => (
-              <li key={item.name}>
-                <Link
-                  href={item.path}
-                  className="block py-2 hover:text-blue-600 hover:underline transition"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
       </nav>
+
+      {/* Mobile Sidebar */}
+      <div
+        className={`md:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-20 transform ${
+          isSidebarOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300`}
+      >
+        <div className="flex flex-col items-center space-y-4 py-10 text-white">
+          {[{ name: "About Me", path: "/about" }, { name: "Projects", path: "/projects" }, { name: "Skills", path: "/skills" }, { name: "Experience", path: "/experience" }, { name: "Education", path: "/education" }, { name: "Blog", path: "/blog" }, { name: "Contact", path: "/contact" }].map((item) => (
+            <li key={item.name}>
+              <Link
+                href={item.path}
+                className="block py-2 hover:text-blue-600 hover:underline transition"
+                onClick={toggleSidebar}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </div>
+      </div>
     </>
   );
 };
