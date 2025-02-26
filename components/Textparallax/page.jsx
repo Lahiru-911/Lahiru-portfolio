@@ -29,7 +29,7 @@ export default function Textparallax() {
         <Slide direction={"right"} left={"-25%"} progress={scrollYProgress} />
         <Slide direction={"left"} left={"-75%"} progress={scrollYProgress} />
       </div>
-      <div className="h-screen" />
+      <div className="h-screen " />
     </main>
   );
 }
