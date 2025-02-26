@@ -6,16 +6,16 @@ import WordsMarquee from "../WordsMarquee/page";
 
 export default function HeroSection() {
   return (
-    <div className="relative min-h-screen rounded-b-3xl shadow-2xl ring-1 ring-gray-900/10 bg-gray-300 flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen rounded-b-3xl shadow-2xl ring-1 ring-gray-900/10 bg-[#999D9E] flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div className="hidden md:block absolute  bottom-0 right-40 ">
+      <div className="hidden md:block absolute  bottom-0 right-96 ">
         <motion.img
-          src="/lk.webp"
+          src="/meg.webp"
           alt="Lahiru Kavinda"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className=" w-[730px]"
+          className=" w-[680px]"
         />
       </div>
 
