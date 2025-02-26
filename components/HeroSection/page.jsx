@@ -8,14 +8,14 @@ export default function HeroSection() {
   return (
     <div className="relative min-h-screen rounded-b-3xl shadow-2xl ring-1 ring-gray-900/10 bg-[#999D9E] flex items-center justify-center overflow-hidden">
       {/* Background */}
-      <div className="hidden md:block absolute  bottom-0 right-96 ">
+      <div className=" absolute  bottom-0 right-64 ">
         <motion.img
           src="/meg.webp"
           alt="Lahiru Kavinda"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className=" w-[680px]"
+          className=" max-w-[680px]"
         />
       </div>
 
@@ -31,33 +31,30 @@ export default function HeroSection() {
           Contact
         </a>
       </nav>
-      <Link href={"/contact"}>
-        <MagnetButton />
-      </Link>
+
       {/* Text Content */}
-      <div className="absolute left-20 text-center md:text-left text-black max-w-xl">
-        <motion.h1
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-6xl md:text-9xl font-bold tracking-tight"
-        >
-          Hi, I'M LAHIRU KAVINDA
-        </motion.h1>
+      <div className="flex flex-col justify-center items-start gap-5 absolute left-20 text-center md:text-left text-black max-w-xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
           className="text-2xl md:text-4xl font-light  mt-4"
         >
-          Software Engineer & Web Developer
+          {/* <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M13 17H20" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 7L10 12L5 17" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> */}
+          Software <br />
+          Engineer & Web Developer
         </motion.p>
+        <Link href={"/contact"}>
+          <MagnetButton />
+        </Link>
       </div>
 
-      <div className="absolute z-20 bottom-10 "><WordsMarquee/></div>
+      <div className="absolute z-20 bottom-10 ">
+        <WordsMarquee />
+      </div>
 
       {/* Floating Location */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
@@ -68,7 +65,7 @@ export default function HeroSection() {
           in Sri Lanka
         </span>
         <span className="text-xl">🌍</span>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }
