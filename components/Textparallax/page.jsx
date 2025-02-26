@@ -23,13 +23,13 @@ export default function Textparallax() {
 
   return (
     <main className="overflow-hidden">
-      <div className="mt-28"/>
+      <div className="mt-12" />
       <div ref={container}>
         <Slide direction={"left"} left={"-40%"} progress={scrollYProgress} />
         <Slide direction={"right"} left={"-25%"} progress={scrollYProgress} />
         <Slide direction={"left"} left={"-75%"} progress={scrollYProgress} />
       </div>
-      <div className="mb-36"/>
+      <div className="h-screen" />
     </main>
   );
 }
@@ -56,7 +56,7 @@ const Slide = (props) => {
 const Phrase = () => {
   return (
     <div className={"px-5 flex gap-5 items-center"}>
-      <p className="text-[7.5vw]">Front End Developer</p>
+      <p className="text-[7.5vw]">Your Vision, My Code.</p>
     </div>
   );
 };

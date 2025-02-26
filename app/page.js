@@ -12,16 +12,16 @@ const Home = () => {
       <SocialMediaIcons />
      
       {/* <WordsMarquee/> */}
-      <Textparallax/>
+      
 
     {/* Why Residue Solution */}
     <div className="grid md:grid-cols-2 m-4 md:m-6 lg:m-7 xl:m-8">
           <div>
             <h1 className="text-[#D8D8D8] text-left font-bold text-4xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[120px] 2xl:text-[160px]">
-              Why
+            I'm,
               <br />
-              Residue
-              <br /> Solution
+              Lahiru
+              <br /> Kavinda
             </h1>
           </div>
           <div className="grid grid-rows-2">
@@ -53,7 +53,7 @@ const Home = () => {
           </div>
         </div>
 
-
+        <Textparallax/>
 
     </div>
   );
