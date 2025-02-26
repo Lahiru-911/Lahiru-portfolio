@@ -1,7 +1,7 @@
 import React from "react";
 import Content from "./Content";
 
-export default function Footer2() {
+export default function Footer() {
   return (
     <div
       className="relative h-[800px]"
