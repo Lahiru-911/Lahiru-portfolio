@@ -1,14 +1,15 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { RiArrowRightUpLine } from "react-icons/ri";
 
 const Content = () => {
   return (
-    <footer className="bg-black text-white min-h-screen py-10 px-6 md:px-16 lg:px-20 rounded-t-3xl">
+    <footer className="bg-black text-white min-h-screen py-6 px-6 md:px-16 lg:px-20 rounded-t-3xl">
       <div className="max-w-full mx-auto text-left">
         {/* First Text Section */}
         <div className=" hidden md:block">
-          <h2 className="text-xs sm:text-sm md:text-base font-semibold tracking-widest mb-1 md:mb-3">
+          <h2 className="text-xs sm:text-sm md:text-base font-semibold tracking-widest mb-1">
             INTERESTED IN LEARNING MORE?
           </h2>
           <Link
@@ -102,9 +103,15 @@ const Content = () => {
             </ul>
           </div>
         </div>
-
-        <div className="border-t border-gray-600 mt-8 pt-4 text-sm text-gray-400 text-center">
+        
+        <div className="border-t border-gray-600 mt-8 pt-4 text-sm text-gray-100 text-center">
           © 2025 Lahiru Kavinda. All Rights Reserved.
+        </div>
+
+        <div className="">
+          <h1 className="text-center font-bold text-[17vw]  leading-none bottom-0 tracking-widest">
+            LAHIRU
+          </h1>
         </div>
       </div>
     </footer>
@@ -112,3 +119,18 @@ const Content = () => {
 };
 
 export default Content;
+
+{
+  /* <div className="border-t border-gray-700 mt-6 pt-4 flex justify-between items-center">
+  <p className="text-gray-400 text-sm">
+    © 2025 Lahiru Kavinda. All Rights Reserved.
+  </p>
+  
+  <button
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    className="bg-gray-700 hover:bg-gray-500 text-white p-2 rounded-full transition"
+  >
+    ⬆
+  </button>
+</div> */
+}
