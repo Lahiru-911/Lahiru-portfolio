@@ -4,6 +4,7 @@ import MagnetButton from "../MagnetButton/page";
 import Link from "next/link";
 import WordsMarquee from "../WordsMarquee/page";
 import { FaTerminal } from "react-icons/fa";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -23,14 +24,20 @@ export default function HeroSection() {
       <div>
         {/* Background */}
         <div className="absolute bottom-0 inset-x-0 flex justify-center md:justify-end md:right-10 xl:right-28">
-          <motion.img
-            src="/meg.webp"
-            alt="Lahiru Kavinda"
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className=" max-w-[550px] xl:max-w-[680px]"
-          />
+          >
+            <Image
+              src="/meg.webp"
+              alt="Lahiru Kavinda"
+              width={680}
+              height={800}
+              className="w-[80%] max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[650px] h-auto object-contain"
+              priority
+            />
+          </motion.div>
         </div>
 
         {/* Text Content */}
