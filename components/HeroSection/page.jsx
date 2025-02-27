@@ -8,18 +8,6 @@ import { FaTerminal } from "react-icons/fa";
 export default function HeroSection() {
   return (
     <div className="relative min-h-screen md:rounded-b-3xl shadow-2xl ring-1 ring-gray-900/10 bg-[#999D9E] flex items-end md:items-center justify-center overflow-hidden ">
-      {/* Background */}
-      <div className="absolute bottom-0 inset-x-0 flex justify-center md:justify-end md:right-10">
-        <motion.img
-          src="/meg.webp"
-          alt="Lahiru Kavinda"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className=" max-w-[550px] xl:max-w-[680px]"
-        />
-      </div>
-
       {/* Navbar */}
       <nav className="absolute top-5 right-10 flex space-x-6 text-white text-lg">
         <a href="#work" className="hover:underline">
@@ -32,29 +20,50 @@ export default function HeroSection() {
           Contact
         </a>
       </nav>
+      <div>
+        {/* Background */}
+        <div className="absolute bottom-0 inset-x-0 flex justify-center md:justify-end md:right-10 xl:right-28">
+          <motion.img
+            src="/meg.webp"
+            alt="Lahiru Kavinda"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className=" max-w-[550px] xl:max-w-[680px]"
+          />
+        </div>
 
-      {/* Text Content */}
-      <div className="flex flex-col justify-end items-start gap-10 absolute inset-x-0 left-5 lg:left-16 text-center md:text-left text-white bottom-16 md:bottom-1/3">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="flex flex-col justify-center items-start"
-        >
-          <FaTerminal className="text-3xl md:text-4xl" />
-          <motion.p
+        {/* Text Content */}
+        <div className="flex flex-col justify-end items-start gap-10 absolute inset-x-0 left-5 lg:left-16 text-center md:text-left text-white bottom-16 md:bottom-1/3">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-normal mt-4 text-start md:w-11/12 lg:w-full"
+            className="flex flex-col justify-center items-start"
           >
-            Software <br/>Engineer & Web Developer
-          </motion.p>
-        </motion.div>
-        <div>
-          <Link href="/contact">
-            <MagnetButton />
-          </Link>
+            <FaTerminal className="text-3xl md:text-4xl" />
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              className="text-2xl md:text-3xl lg:text-4xl font-normal mt-4 text-start md:w-11/12 lg:w-full"
+            >
+              Software <br />
+              Engineer & Web Developer
+            </motion.p>
+          </motion.div>
+
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            >
+              <Link href="/contact">
+                <MagnetButton />
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </div>
 
