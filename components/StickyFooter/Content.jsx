@@ -4,20 +4,21 @@ import { RiArrowRightUpLine } from "react-icons/ri";
 
 const Content = () => {
   return (
-    <footer className="bg-black text-white h-screen py-10 px-6 md:px-16 lg:px-20 rounded-t-3xl">
+    <footer className="bg-black text-white min-h-screen py-10 px-6 md:px-16 lg:px-20 rounded-t-3xl">
       <div className="max-w-full mx-auto text-left">
         {/* First Text Section */}
-        <h2 className="text-xs sm:text-sm md:text-base font-semibold tracking-widest mb-1 md:mb-3">
-          INTERESTED IN LEARNING MORE?
-        </h2>
-        <Link
-          href={"/contact"}
-          className="flex items-center justify-start space-x-1 mb-8 hover:text-blue-500"
-        >
-          <h1 className="text-3xl md:text-5xl font-bold">Connect with me</h1>
-          <RiArrowRightUpLine className="text-2xl md:text-5xl" />
-        </Link>
-
+        <div className=" hidden md:block">
+          <h2 className="text-xs sm:text-sm md:text-base font-semibold tracking-widest mb-1 md:mb-3">
+            INTERESTED IN LEARNING MORE?
+          </h2>
+          <Link
+            href={"/contact"}
+            className="flex items-center justify-start space-x-1 mb-8 hover:text-blue-500"
+          >
+            <h1 className="text-3xl md:text-5xl font-bold">Connect with me</h1>
+            <RiArrowRightUpLine className="text-2xl md:text-5xl" />
+          </Link>
+        </div>
         {/* Links Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-5 md:pt-8">
           <div>
@@ -75,6 +76,7 @@ const Content = () => {
               ))}
             </ul>
           </div>
+
           <div>
             <h3 className="font-bold mb-4 border-b border-gray-50">CONTACT</h3>
             <ul className="space-y-4 md:space-y-6 font-light md:text-lg">
