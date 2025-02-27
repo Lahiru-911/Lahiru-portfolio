@@ -24,7 +24,7 @@ const Content = () => {
             <h3 className="font-bold mb-4 border-b border-gray-50">
               NAVIGATION
             </h3>
-            <ul className="space-y-2 ">
+            <ul className="space-y-4 md:space-y-6 font-light">
               {[
                 { name: "About Me", link: "/" },
                 { name: "Projects", link: "/projects" },
@@ -47,7 +47,7 @@ const Content = () => {
           </div>
           <div>
             <h3 className="font-bold mb-4 border-b border-gray-50">SOCIALS</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-4 md:space-y-6 font-light">
               {[
                 { name: "LinkedIn", link: "https://www.linkedin.com" },
                 { name: "Facebook", link: "https://www.facebook.com" },
@@ -75,7 +75,7 @@ const Content = () => {
           </div>
           <div>
             <h3 className="font-bold mb-4 border-b border-gray-50">CONTACT</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-4 md:space-y-6 font-light">
               {[
                 { name: "Email", link: "mailto:your-email@example.com" },
                 { name: "Phone", link: "tel:+1234567890" },
