@@ -113,10 +113,16 @@ const Content = () => {
           <span className="flex-1 border-t border-white"></span>
         </div>
 
-        <div>
-          <h1 className="text-center font-bold text-[15vw]  leading-none bottom-0 tracking-widest">
+        <div className="w-full bg-black py-4 relative flex justify-center items-center">
+          <h1 className="text-white font-bold text-[15vw] leading-none tracking-widest">
             LAHIRU
           </h1>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="absolute right-4 bottom-4 bg-gray-700 hover:bg-gray-500 text-white p-2 rounded-full transition"
+          >
+            ⬆
+          </button>
         </div>
       </div>
     </footer>

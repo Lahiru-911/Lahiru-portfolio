@@ -15,7 +15,7 @@ export default function SocialMediaIcons() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-5 right-4 flex flex-col items-center gap-3 z-50">
+    <div className="fixed bottom-2/3 right-4 flex flex-col items-center gap-3 z-50">
       {/* Social Icons - Smooth Animation */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
