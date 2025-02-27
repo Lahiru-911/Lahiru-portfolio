@@ -1,4 +1,4 @@
-import SocialMediaIcons from "@/components/SocialMediaIcons";
+
 import React from "react";
 
 const Contact = () => {

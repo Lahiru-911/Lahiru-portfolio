@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <HeroSection/>
-      <SocialMediaIcons />
+      {/* <SocialMediaIcons /> */}
      
       {/* <WordsMarquee/> */}
       
