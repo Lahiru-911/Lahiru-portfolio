@@ -14,19 +14,19 @@ const Content = () => {
           </h2>
           <Link
             href={"/contact"}
-            className="flex items-center justify-start space-x-1 mb-8 hover:text-blue-500"
+            className="flex items-center justify-start space-x-1 mb-5 hover:text-blue-500"
           >
             <h1 className="text-3xl md:text-5xl font-bold">Connect with me</h1>
             <RiArrowRightUpLine className="text-2xl md:text-5xl" />
           </Link>
         </div>
         {/* Links Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-5 md:pt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 md:pt-4">
           <div>
-            <h3 className="font-bold mb-4 border-b border-gray-50">
+            <h3 className="font-bold mb-3 border-b border-gray-50">
               NAVIGATION
             </h3>
-            <ul className="space-y-4 md:space-y-6 font-light md:text-lg">
+            <ul className="space-y-1 md:space-y-4 font-light md:text-lg">
               {[
                 { name: "About Me", link: "/" },
                 { name: "Projects", link: "/projects" },
@@ -49,8 +49,8 @@ const Content = () => {
           </div>
 
           <div>
-            <h3 className="font-bold mb-4 border-b border-gray-50">SOCIALS</h3>
-            <ul className="space-y-4 md:space-y-6 font-light md:text-lg">
+            <h3 className="font-bold mb-3 border-b border-gray-50">SOCIALS</h3>
+            <ul className="space-y-1 md:space-y-4 font-light md:text-lg">
               {[
                 { name: "LinkedIn", link: "https://www.linkedin.com" },
                 { name: "Facebook", link: "https://www.facebook.com" },
@@ -79,8 +79,8 @@ const Content = () => {
           </div>
 
           <div>
-            <h3 className="font-bold mb-4 border-b border-gray-50">CONTACT</h3>
-            <ul className="space-y-4 md:space-y-6 font-light md:text-lg">
+            <h3 className="font-bold mb-3 border-b border-gray-50">CONTACT</h3>
+            <ul className="space-y-1 md:space-y-4 font-light md:text-lg">
               {[
                 { name: "Email", link: "mailto:lahiruxk@gmail.com" },
                 { name: "Phone", link: "tel:+94775788667" },
@@ -103,13 +103,18 @@ const Content = () => {
             </ul>
           </div>
         </div>
-        
-        <div className="border-t border-gray-600 mt-8 pt-4 text-sm text-gray-100 text-center">
-          © 2025 Lahiru Kavinda. All Rights Reserved.
+
+        {/* Copyright */}
+        <div className="flex items-center justify-center text-white text-sm">
+          <span className="flex-1 border-t border-white"></span>
+          <span className="px-2">
+            © 2025 Lahiru Kavinda. All Rights Reserved.
+          </span>
+          <span className="flex-1 border-t border-white"></span>
         </div>
 
-        <div className="">
-          <h1 className="text-center font-bold text-[17vw]  leading-none bottom-0 tracking-widest">
+        <div>
+          <h1 className="text-center font-bold text-[15vw]  leading-none bottom-0 tracking-widest">
             LAHIRU
           </h1>
         </div>
