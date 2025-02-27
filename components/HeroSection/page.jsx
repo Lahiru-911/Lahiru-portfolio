@@ -35,21 +35,27 @@ export default function HeroSection() {
 
       {/* Text Content */}
       <div className="flex flex-col justify-end items-center md:items-start gap-8 absolute inset-x-0 md:left-20 text-center md:text-left text-white">
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-2xl md:text-4xl font-light mt-4 flex items-center gap-2"
+          className="flex flex-col justify-center items-center"
         >
           <FaTerminal className="text-3xl md:text-4xl" />
-          <span>
-            Software <br />
-            Engineer & Web Developer
-          </span>
-        </motion.p>
-        <Link href="/contact">
-          <MagnetButton />
-        </Link>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="text-2xl md:text-4xl font-light mt-4 "
+          >
+            Software Engineer & Web Developer
+          </motion.p>
+        </motion.div>
+        <div>
+          <Link href="/contact">
+            <MagnetButton />
+          </Link>
+        </div>
       </div>
 
       <div className="absolute z-20 bottom-10 ">
