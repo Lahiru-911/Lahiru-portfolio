@@ -24,7 +24,7 @@ const Content = () => {
             <h3 className="font-bold mb-4 border-b border-gray-50">
               NAVIGATION
             </h3>
-            <ul className="space-y-4 md:space-y-6 font-light">
+            <ul className="space-y-4 md:space-y-6 font-light md:text-lg">
               {[
                 { name: "About Me", link: "/" },
                 { name: "Projects", link: "/projects" },
@@ -45,9 +45,10 @@ const Content = () => {
               ))}
             </ul>
           </div>
+
           <div>
             <h3 className="font-bold mb-4 border-b border-gray-50">SOCIALS</h3>
-            <ul className="space-y-4 md:space-y-6 font-light">
+            <ul className="space-y-4 md:space-y-6 font-light md:text-lg">
               {[
                 { name: "LinkedIn", link: "https://www.linkedin.com" },
                 { name: "Facebook", link: "https://www.facebook.com" },
@@ -59,15 +60,16 @@ const Content = () => {
               ].map((item) => (
                 <li
                   key={item.name}
-                  className="hover:text-gray-400 cursor-pointer"
+                  className="hover:text-gray-400 cursor-pointer flex items-center gap-2 group"
                 >
                   <a
                     href={item.link}
-                    className="text-white"
+                    className="text-white flex items-center gap-1 hover:text-blue-300"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     {item.name}
+                    <RiArrowRightUpLine className="hidden group-hover:inline-block transition-all text-lg" />
                   </a>
                 </li>
               ))}
@@ -75,10 +77,10 @@ const Content = () => {
           </div>
           <div>
             <h3 className="font-bold mb-4 border-b border-gray-50">CONTACT</h3>
-            <ul className="space-y-4 md:space-y-6 font-light">
+            <ul className="space-y-4 md:space-y-6 font-light md:text-lg">
               {[
-                { name: "Email", link: "mailto:your-email@example.com" },
-                { name: "Phone", link: "tel:+1234567890" },
+                { name: "Email", link: "mailto:lahiruxk@gmail.com" },
+                { name: "Phone", link: "tel:+94775788667" },
                 { name: "Location", link: "https://www.google.com/maps" },
               ].map((item) => (
                 <li
