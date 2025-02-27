@@ -6,7 +6,7 @@ import { FaArrowUp } from "react-icons/fa";
 
 const Content = () => {
   return (
-    <footer className="bg-black text-white min-h-screen py-6  rounded-t-3xl">
+    <footer className="bg-black text-white min-h-screen py-6 rounded-t-3xl">
       <div className="px-6 md:px-16 lg:px-20">
         <div className="max-w-full mx-auto text-left">
           {/* First Text Section */}
@@ -122,13 +122,14 @@ const Content = () => {
           </div>
         </div>
       </div>
-      <div className="w-full bg-black py-4 relative flex justify-center items-center">
+      
+      <div className="bg-black py-4 relative flex justify-center items-center">
         <h1 className="text-white font-bold text-[15vw] leading-none tracking-wide">
           L A H I R U
         </h1>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="absolute right-5 bottom-10 shadow-2xl ring-1 ring-gray-900/10 bg-gray-700 hover:bg-gray-500 text-white p-2 rounded-full transition"
+          className="absolute right-5 bottom-4 shadow-2xl ring-1 ring-gray-900/10 bg-gray-700 hover:bg-gray-500 text-white p-2 rounded-full transition"
         >
           <FaArrowUp />
         </button>
@@ -138,3 +139,12 @@ const Content = () => {
 };
 
 export default Content;
+
+<div className="bg-black text-white py-4 flex justify-center items-center relative">
+      <h2 className="text-4xl font-serif tracking-wide">LAHIRU</h2>
+      <div className="absolute right-4 bottom-3">
+        <button className="w-6 h-6 flex items-center justify-center bg-gray-200 text-black rounded-full">
+          ↑
+        </button>
+      </div>
+    </div>
