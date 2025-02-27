@@ -19,12 +19,12 @@ const Content = () => {
         </Link>
 
         {/* Links Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-5 md:pt-8">
           <div>
-            <h3 className="font-bold mb-4 border-b border-gray-600">
+            <h3 className="font-bold mb-4 border-b border-gray-50">
               NAVIGATION
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 ">
               {[
                 { name: "About Me", link: "/" },
                 { name: "Projects", link: "/projects" },
@@ -34,11 +34,11 @@ const Content = () => {
                 { name: "Education", link: "/education" },
                 { name: "Blog", link: "/blog" },
               ].map((item) => (
-                <li
-                  key={item.name}
-                  className="hover:text-gray-400 cursor-pointer"
-                >
-                  <a href={item.link} className="text-white">
+                <li key={item.name} className="cursor-pointer">
+                  <a
+                    href={item.link}
+                    className="text-white hover:text-gray-300"
+                  >
                     {item.name}
                   </a>
                 </li>
@@ -46,7 +46,7 @@ const Content = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold mb-4 border-b border-gray-600">SOCIALS</h3>
+            <h3 className="font-bold mb-4 border-b border-gray-50">SOCIALS</h3>
             <ul className="space-y-2">
               {[
                 { name: "LinkedIn", link: "https://www.linkedin.com" },
@@ -74,7 +74,7 @@ const Content = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-bold mb-4 border-b border-gray-600">CONTACT</h3>
+            <h3 className="font-bold mb-4 border-b border-gray-50">CONTACT</h3>
             <ul className="space-y-2">
               {[
                 { name: "Email", link: "mailto:your-email@example.com" },
