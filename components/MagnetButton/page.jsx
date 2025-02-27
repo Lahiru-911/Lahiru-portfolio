@@ -73,8 +73,8 @@ const StyledWrapper = styled.div`
     }
 
     @media (min-width: 1024px) {
-      width: 120px;
-      height: 120px;
+      width: 110px;
+      height: 110px;
     }
   }
 
