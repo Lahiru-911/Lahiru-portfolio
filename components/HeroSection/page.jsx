@@ -34,7 +34,7 @@ export default function HeroSection() {
       </nav>
 
       {/* Text Content */}
-      <div className="flex flex-col justify-end items-start gap-8 absolute inset-x-0 left-5 lg:left-28 text-center md:text-left text-white bottom-16 md:bottom-1/3">
+      <div className="flex flex-col justify-end items-start gap-10 absolute inset-x-0 left-5 lg:left-16 text-center md:text-left text-white bottom-16 md:bottom-1/3">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-2xl md:text-4xl font-normal mt-4 text-start md:w-11/12 lg:w-full"
+            className="text-2xl md:text-3xl lg:text-4xl font-normal mt-4 text-start md:w-11/12 lg:w-full"
           >
             Software <br/>Engineer & Web Developer
           </motion.p>
