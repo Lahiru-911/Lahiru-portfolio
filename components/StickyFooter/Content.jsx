@@ -105,9 +105,9 @@ const Content = () => {
         </div>
 
         {/* Copyright */}
-        <div className="flex items-center justify-center text-white text-sm">
+        <div className="flex items-center justify-center text-white text-xs md:text-sm mt-5">
           <span className="flex-1 border-t border-white"></span>
-          <span className="px-2">
+          <span className=" px-1 md:px-2">
             © 2025 Lahiru Kavinda. All Rights Reserved.
           </span>
           <span className="flex-1 border-t border-white"></span>
@@ -131,17 +131,3 @@ const Content = () => {
 
 export default Content;
 
-{
-  /* <div className="border-t border-gray-700 mt-6 pt-4 flex justify-between items-center">
-  <p className="text-gray-400 text-sm">
-    © 2025 Lahiru Kavinda. All Rights Reserved.
-  </p>
-  
-  <button
-    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-    className="bg-gray-700 hover:bg-gray-500 text-white p-2 rounded-full transition"
-  >
-    ⬆
-  </button>
-</div> */
-}
