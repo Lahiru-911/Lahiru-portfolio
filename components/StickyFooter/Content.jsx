@@ -37,7 +37,7 @@ const Content = () => {
                   { name: "About Me", link: "/" },
                   { name: "Projects", link: "/projects" },
                   { name: "Contact", link: "/contact" },
-                  { name: "Skills", link: "/skills" },
+                  { name: "Skills", link: "/allthree" },
                   { name: "Experience", link: "/experience" },
                   { name: "Education", link: "/education" },
                   { name: "Blog", link: "/blog" },
