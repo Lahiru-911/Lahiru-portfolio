@@ -1,7 +1,12 @@
+
+import { ProjectParallax } from "@/components/ProjectParallax/projectparallax";
 import React from "react";
 
 const Projects = () => {
-  return <div>Projects</div>;
+  return <div>
+
+    <ProjectParallax/>
+  </div>;
 };
 
 export default Projects;

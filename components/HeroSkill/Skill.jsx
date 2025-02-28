@@ -10,9 +10,9 @@ export function Skill() {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-black ">
-              Unleash the power of <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                Scroll Animations
+             My Technological Expertise <br />
+              <span className="text-4xl md:text-[4rem] font-bold mt-1 leading-none">
+              Scroll Through My Expertise
               </span>
             </h1>
           </>

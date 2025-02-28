@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { Timeline } from "./timeline";
+import { Timeline } from "./Timeline";
 
 export function TimelineExp() {
   const data = [

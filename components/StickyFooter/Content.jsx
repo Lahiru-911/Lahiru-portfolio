@@ -38,8 +38,8 @@ const Content = () => {
                   { name: "Projects", link: "/projects" },
                   { name: "Contact", link: "/contact" },
                   { name: "Skills", link: "/allthree" },
-                  { name: "Experience", link: "/experience" },
-                  { name: "Education", link: "/education" },
+                  { name: "Experience", link: "/allthree" },
+                  { name: "Education", link: "/allthree" },
                   { name: "Blog", link: "/blog" },
                 ].map((item) => (
                   <li key={item.name} className="cursor-pointer">
