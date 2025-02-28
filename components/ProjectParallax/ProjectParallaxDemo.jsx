@@ -90,13 +90,13 @@ export const ProjectParallaxDemo = ({ products }) => {
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold text-black">
-        The Ultimate <br /> development studio
+      <h1 className="text-2xl md:text-7xl font-bold text-black font-hedvig">
+        See How <br /> I Make Ideas Real
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-black">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+        I craft innovative and impactful solutions using the latest technologies
+        and frameworks. As a passionate developer, I am committed to bringing
+        ideas to life with precision and creativity.
       </p>
     </div>
   );
