@@ -106,18 +106,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <div className="relative min-h-screen md:rounded-b-3xl shadow-2xl ring-1 ring-gray-900/10 bg-[#999D9E] flex items-end md:items-center justify-center overflow-hidden">
-      {/* Navbar */}
-      <nav className="absolute top-5 right-10 flex space-x-6 text-white text-lg">
-        <a href="#work" className="hover:underline">
-          Work
-        </a>
-        <a href="#about" className="hover:underline">
-          About
-        </a>
-        <a href="#contact" className="hover:underline">
-          Contact
-        </a>
-      </nav>
+      
 
       {/* Background & Image */}
       <div className="absolute bottom-0 inset-x-0 flex justify-center md:justify-end md:right-10 xl:right-28">
