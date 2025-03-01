@@ -13,7 +13,7 @@ export const links = [
   },
   {
     title: "Expertise",
-    href: "/expertise",
+    href: "/allthree",
   },
   {
     title: "Experience",
