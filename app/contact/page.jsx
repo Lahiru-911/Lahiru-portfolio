@@ -1,11 +1,12 @@
-import HeroSection from "@/components/HeroSection/page";
+
+import He from "@/components/He";
 import React from "react";
 
 const Contact = () => {
   return (
     <div className="text-black">
-      Contact
-      <HeroSection />
+    
+      <He/>
     </div>
   );
 };
