@@ -5,13 +5,13 @@ const Contact = () => (
     {/* Background Image */}
     <div className="absolute inset-0 overflow-hidden">
       <Image
-        src="/me12.webp"
+        src="/me14.webp"
         alt="Background"
         fill
         className="absolute inset-0 object-cover"
         priority
+        quality={100}
       />
-      
     </div>
 
     {/* Content Container */}

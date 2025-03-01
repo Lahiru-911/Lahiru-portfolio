@@ -106,28 +106,27 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <div className="relative min-h-screen md:rounded-b-3xl shadow-2xl ring-1 ring-gray-900/10 bg-[#999D9E] flex items-end md:items-center justify-center overflow-hidden">
-      
-
       {/* Background & Image */}
       <div className="absolute bottom-0 inset-x-0 flex justify-center md:justify-end md:right-10 xl:right-28">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="relative w-[80%] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl aspect-[3/4]" // Added aspect ratio
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="relative w-full h-auto"
         >
           <Image
-            src="/meg.webp" 
+            src="/me14.webp"
             alt="Lahiru Kavinda"
-            fill
-            className="object-contain"
+            width={1680}
+            height={1800}
+            className="w-full h-auto object-contain rounded-full"
             priority
           />
         </motion.div>
       </div>
 
       {/* Text Content */}
-      <div className="absolute inset-x-0 left-5 lg:left-16 text-start md:text-left text-white bottom-16 md:bottom-1/3 flex flex-col gap-10">
+      <div className="absolute inset-x-0 left-5 lg:left-16 text-white bottom-16 md:bottom-1/3 flex flex-col gap-10 text-start">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -153,7 +152,9 @@ export default function HeroSection() {
           transition={{ delay: 0.5, duration: 1 }}
         >
           <Link href="/contact">
-            <MagnetButton />
+            <div>
+              <MagnetButton />
+            </div>
           </Link>
         </motion.div>
       </div>
@@ -165,3 +166,4 @@ export default function HeroSection() {
     </div>
   );
 }
+
