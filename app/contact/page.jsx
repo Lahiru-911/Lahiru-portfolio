@@ -1,26 +1,23 @@
 import Image from "next/image";
 
 const Contact = () => (
-  <div className="relative w-full min-h-screen flex items-center justify-center">
-    {/* Background Image */}
-    <div className="absolute inset-0 overflow-hidden">
-      <Image
-        src="/me14.webp"
-        alt="Background"
-        fill
-        className="absolute inset-0 object-cover"
-        priority
-        quality={100}
-      />
+  <>
+    <div className="relative w-full min-h-screen flex items-center justify-center rounded rounded-b-3xl">
+      {/* Background Image */}
+      <div className="absolute inset-0 ">
+        <Image
+          src="/me14.webp"
+          alt="Background"
+          fill
+          className="absolute inset-0 object-cover rounded rounded-b-3xl"
+          priority
+          quality={100}
+        />
+      </div>
     </div>
 
-    {/* Content Container */}
-    <div className="relative z-10 px-6 text-center">
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-        Welcome to My Portfolio
-      </h1>
-    </div>
-  </div>
+    <div className="bg-white w-full h-screen"></div>
+  </>
 );
 
 export default Contact;
