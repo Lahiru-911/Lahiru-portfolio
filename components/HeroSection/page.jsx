@@ -170,6 +170,9 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import MagnetButton from "../MagnetButton/page";
+import { FaTerminal } from "react-icons/fa";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -198,7 +201,18 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Text Content */}
-        <div className="flex flex-col "></div>
+        <div className="flex flex-col ">
+          <FaTerminal className="text-3xl md:text-4xl" />
+          <p>
+            Software <br />
+            Engineer & Web Developer
+          </p>
+          <Link href="/contact">
+            <div>
+              <MagnetButton />
+            </div>
+          </Link>
+        </div>
       </div>
     </>
   );
