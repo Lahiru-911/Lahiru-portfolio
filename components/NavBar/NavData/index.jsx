@@ -19,6 +19,7 @@ export default function index({ closeMenu }) {
                 initial="initial"
                 animate="enter"
                 exit="exit"
+                className="font-mono"
               >
                 <Link href={href} onClick={closeMenu}>
                   <span>{title}</span>

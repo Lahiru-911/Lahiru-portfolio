@@ -160,7 +160,7 @@ export default function HeroSection() {
       </div>
 
       {/* Words Marquee */}
-      <div className="absolute z-20 bottom-2">
+      <div className="absolute z-20 bottom-5">
         <WordsMarquee />
       </div>
     </div>
