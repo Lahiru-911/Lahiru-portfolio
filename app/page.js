@@ -41,7 +41,7 @@ const Home = () => {
           <HeroSection />
 
           {/* <SocialMediaIcons /> */}
-        {/* <WordsMarquee/> */}
+        <WordsMarquee/>
 
           {/* Why Residue Solution */}
           <div className="grid md:grid-cols-2 m-4 md:m-6 lg:m-7 xl:m-8">

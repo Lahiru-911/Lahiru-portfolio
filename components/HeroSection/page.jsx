@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import MagnetButton from "../MagnetButton/page";
 import { FaTerminal } from "react-icons/fa";
 import Link from "next/link";
+import WordsMarquee from "../WordsMarquee/page";
 
 const HeroSection = () => {
   return (
@@ -34,13 +35,13 @@ const HeroSection = () => {
 
         {/* Text Content */}
         <motion.div
-          className="absolute z-10 flex flex-col text-white mx-5 my-3 gap-4 "
+          className="absolute z-10 flex flex-col text-white mx-5 md:mx-8 my-3 gap-4 "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <FaTerminal className="text-2xl md:text-4xl" />
-          <h1 className="text-lg md:text-2xl dm-sans-regular">
+          <FaTerminal className="text-2xl lg:text-4xl" />
+          <h1 className="text-xl lg:text-3xl dm-sans-regular">
             Software <br />
             Engineer & Web Developer
           </h1>
@@ -50,29 +51,30 @@ const HeroSection = () => {
             </div>
           </Link>
         </motion.div>
+
+        {/* Floating Location */}
+        {/* <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute left-5 bottom-10 bg-black text-white px-4 py-2 rounded-full flex items-center space-x-2"
+        >
+          <span>
+            Located <br />
+            in Sri Lanka
+          </span>
+          <span className="text-xl">🌍</span>
+        </motion.div> */}
+
+        {/* <div className="absolute z-20 bottom-5 w-full h-[50px] overflow-hidden pointer-events-none">
+          <WordsMarquee />
+        </div> */}
       </div>
     </>
   );
 };
 
 export default HeroSection;
-
-//       {/* Floating Location */}
-//       {/* <motion.div
-//         initial={{ opacity: 0, x: -50 }}
-//         animate={{ opacity: 1, x: 0 }}
-//         transition={{ duration: 1 }}
-//         className="absolute left-5 bottom-10 bg-black text-white px-4 py-2 rounded-full flex items-center space-x-2"
-//       >
-//         <span>
-//           Located <br />
-//           in Sri Lanka
-//         </span>
-//         <span className="text-xl">🌍</span>
-//       </motion.div> */}
-//     </div>
-//   );
-// }
 
 //       {/* Words Marquee */}
 //       <div className="absolute z-20 bottom-5">
