@@ -52,19 +52,7 @@ const HeroSection = () => {
           </Link>
         </motion.div>
 
-        {/* Floating Location */}
-        {/* <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute left-5 bottom-10 bg-black text-white px-4 py-2 rounded-full flex items-center space-x-2"
-        >
-          <span>
-            Located <br />
-            in Sri Lanka
-          </span>
-          <span className="text-xl">🌍</span>
-        </motion.div> */}
+      
 
         {/* <div className="absolute z-20 bottom-5 w-full h-[50px] overflow-hidden pointer-events-none">
           <WordsMarquee />

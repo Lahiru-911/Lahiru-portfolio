@@ -1,12 +1,13 @@
 /* Base styles */
 .container {
-  height: 100vh;
-  width: 100vw;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  height: 50vh;
+  width: 50vw;
   display: flex;
   justify-content: flex-start; /* Align items to the left */
   align-items: center; /* Vertically center the items (you can change it to 'flex-start' for top alignment) */
-  padding-left: 25px; /* Add space on the left side */
-  background-color: lightgrey;
+  /* Add space on the left side */
 }
 
 .body {
@@ -15,7 +16,6 @@
   position: absolute;
   transform-style: preserve-3d;
   margin-top: 25px;
-  margin-left: 25px;
 }
 
 .textContainer {
@@ -28,12 +28,12 @@
 
 /* Responsive Font Sizes */
 .textContainer p {
-  font-size: 8vw;
+  font-size: 40px;
   font-weight: 700;
   margin: 0;
   transition: all 0.4s;
-  color: white;
-  line-height: 8vw;
+  color: #d8d8d8;
+  line-height: 45px;
 }
 
 .textContainer .secondary {
@@ -61,35 +61,38 @@
 /* Media Queries for Responsiveness */
 
 /* Small screens (mobile devices) */
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .textContainer p {
-    font-size: 12vw; /* Increase the text size on small screens */
-    line-height: 12vw;
+    font-size: 55px; /* Increase the text size on mobile screens */
+    line-height: 50px;
   }
 
   .body {
     margin-top: 5px;
-    margin-left: 5px;
   }
 }
 
 /* Medium screens (tablets) */
-@media (max-width: 900px) {
+@media (min-width: 641px) and (max-width: 768px) {
   .textContainer p {
-    font-size: 10vw; /* Adjust font size for tablet */
-    line-height: 10vw;
+    font-size: 65px; /* Adjust font size for tablets */
+    line-height: 60px;
   }
 
   .body {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 25px;
   }
 }
 
-/* Large screens (desktop and above) */
-@media (min-width: 1200px) {
+/* Large screens (laptops and desktops) */
+@media (min-width: 1024px) {
   .textContainer p {
-    font-size: 5vw; /* Adjust font size for large screens */
-    line-height: 5vw;
+    font-size: 90px; /* Adjust font size for larger screens */
+    line-height: 80px;
+  }
+
+  .body {
+    margin-top: 90px;
   }
 }
