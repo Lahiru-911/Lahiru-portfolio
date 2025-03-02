@@ -35,13 +35,13 @@ const HeroSection = () => {
 
         {/* Text Content */}
         <motion.div
-          className="absolute z-10 flex flex-col text-white mx-5 md:mx-8 my-3 gap-4 "
+          className="absolute z-10 flex flex-col text-white mx-5 md:mx-8 lg:mx-12 my-3 gap-4 md:gap-6 xl:gap-8 "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
           <FaTerminal className="text-2xl lg:text-4xl" />
-          <h1 className="text-xl lg:text-3xl dm-sans-regular">
+          <h1 className="text-xl lg:text-2xl xl:text-4xl dm-sans-regular md:mb-5">
             Software <br />
             Engineer & Web Developer
           </h1>
@@ -53,7 +53,7 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Floating Location */}
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -64,7 +64,7 @@ const HeroSection = () => {
             in Sri Lanka
           </span>
           <span className="text-xl">🌍</span>
-        </motion.div> */}
+        </motion.div>
 
         {/* <div className="absolute z-20 bottom-5 w-full h-[50px] overflow-hidden pointer-events-none">
           <WordsMarquee />
