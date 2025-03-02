@@ -7,15 +7,14 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-import Fab from "@mui/material/Fab";
-import AddIcon from "@mui/icons-material/Add";
-import CloseIcon from "@mui/icons-material/Close";
+
+import GlobeAnimation from "./GlobeAnimation";
 
 export default function SocialMediaIcons() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-2/3 right-4 flex flex-col items-center gap-3 z-50">
+    <div className="fixed right-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center gap-3 z-20">
       {/* Social Icons - Smooth Animation */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
@@ -43,17 +42,15 @@ export default function SocialMediaIcons() {
         ))}
       </motion.div>
 
-      {/* Floating Action Button (FAB) */}
-      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-        <Fab
-          size="medium"
-          color="primary"
-          aria-label="toggle"
-          className="shadow-xl backdrop-blur-md bg-opacity-70"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <CloseIcon /> : <AddIcon />}
-        </Fab>
+      {/* Global icon */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        className="bg-gray-300 px-2 pr-6 rounded-l-full flex items-center flex-row-reverse cursor-pointer "
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <GlobeAnimation />
       </motion.div>
     </div>
   );

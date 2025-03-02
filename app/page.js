@@ -5,6 +5,7 @@ import Preloader from "@/components/preloader/Preloader";
 import HeroSection from "@/components/HeroSection/page";
 import WordsMarquee from "@/components/WordsMarquee/page";
 import Textparallax from "@/components/Textparallax/page";
+import SocialMediaIcons from "@/components/GlobeAnimation/SocialMediaIcons";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,8 +41,8 @@ const Home = () => {
         <div>
           <HeroSection />
 
-          {/* <SocialMediaIcons /> */}
-        <WordsMarquee/>
+          <SocialMediaIcons />
+          <WordsMarquee />
 
           {/* Why Residue Solution */}
           <div className="grid md:grid-cols-2 m-4 md:m-6 lg:m-7 xl:m-8">
