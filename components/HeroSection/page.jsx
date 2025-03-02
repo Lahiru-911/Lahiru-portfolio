@@ -177,7 +177,7 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <>
-      <div className="relative w-full min-h-screen md:rounded-b-3xl shadow-2xl ring-1 ring-gray-900/10 bg-[#999D9E]">
+      <div className="relative w-full min-h-screen md:rounded-b-3xl shadow-2xl ring-1 ring-gray-900/10 bg-[#999D9E] flex justify-start md:items-center items-end">
         {/* === Copyright Section === */}
         <div className="absolute top-4 md:top-5 md:left-10 left-3 dm-sans-regular z-10 text-white">
           © Code by Wara.
@@ -201,18 +201,24 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Text Content */}
-        <div className="flex flex-col ">
-          <FaTerminal className="text-3xl md:text-4xl" />
-          <p>
+        <motion.div className="absolute z-10 flex flex-col text-white mx-5 my-3 gap-4 "
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        >
+          <FaTerminal className="text-2xl md:text-4xl" />
+          <h1 className="text-lg md:text-2xl dm-sans-regular">
             Software <br />
             Engineer & Web Developer
-          </p>
+          </h1>
           <Link href="/contact">
             <div>
               <MagnetButton />
             </div>
           </Link>
-        </div>
+        </motion.div>
+
+        
       </div>
     </>
   );
