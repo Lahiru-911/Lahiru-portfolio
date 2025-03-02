@@ -1,3 +1,5 @@
+
+import PerspectiveText from "@/components/PerspectiveText/PerspectiveText";
 import Image from "next/image";
 
 const Contact = () => (
@@ -16,7 +18,7 @@ const Contact = () => (
       </div>
     </div>
 
-    <div className="bg-white w-full h-screen"></div>
+    <div className=" w-full h-screen"><PerspectiveText/></div>
   </>
 );
 
