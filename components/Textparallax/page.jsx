@@ -56,7 +56,7 @@ const Slide = (props) => {
 const Phrase = () => {
   return (
     <div className={"px-5 flex gap-5 items-center"}>
-      <p className="text-[9vw] font-semibold font-radley">Your Vision, My Code.</p>
+      <p className="text-[9vw] font-semibold font-radley uppercase">Your Vision, My Code.</p>
     </div>
   );
 };

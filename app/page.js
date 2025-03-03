@@ -36,7 +36,9 @@ const Home = () => {
   return (
     <div>
       {/* Preloader */}
-      <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
 
       {!isLoading && (
         <div>
@@ -75,7 +77,10 @@ const Home = () => {
                 </p>
 
                 {/* Resume Download Button */}
-                <a href="/Lahiru-Resume.pdf" download="LahiruKavinda-Resume.pdf">
+                <a
+                  href="/Lahiru-Resume.pdf"
+                  download="LahiruKavinda-Resume.pdf"
+                >
                   <button className="cursor-pointer flex items-center justify-between bg-gradient-to-l from-blue-500 to-purple-600 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-500 hover:ring-1 font-mono w-[120px] mt-3">
                     Resume
                     <svg
@@ -105,6 +110,66 @@ const Home = () => {
           <div className="mx-5 md:mx-20 lg:mx-24 mb-16 md:mb-24">
             <Accordion />
           </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2  gap-10 mx-">
+            {/* Project Card */}
+            <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+              {/* Card Header */}
+              <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg shadow-blue-gray-500/40"></div>
+
+              {/* Card Content */}
+              <div className="p-6">
+                <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                  Tailwind Card
+                </h5>
+                <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  felis ligula.
+                </p>
+              </div>
+
+              {/* Card Footer */}
+              <div className="p-6 pt-0">
+                <button
+                  type="button"
+                  className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-85 focus:shadow-none active:opacity-85 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            {/* Add more cards as needed */}
+            <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+              {/* Card Header */}
+              <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg shadow-blue-gray-500/40"></div>
+
+              {/* Card Content */}
+              <div className="p-6">
+                <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                  Tailwind Card
+                </h5>
+                <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  felis ligula.
+                </p>
+              </div>
+
+              {/* Card Footer */}
+              <div className="p-6 pt-0">
+                <button
+                  type="button"
+                  className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-85 focus:shadow-none active:opacity-85 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+           
+           
+          </div>
+
+
         </div>
       )}
     </div>
