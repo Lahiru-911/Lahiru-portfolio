@@ -7,7 +7,7 @@ import WordsMarquee from "@/components/WordsMarquee/page";
 import Textparallax from "@/components/Textparallax/page";
 import SocialMediaIcons from "@/components/GlobeAnimation/SocialMediaIcons";
 import PerspectiveText from "@/components/PerspectiveText/PerspectiveText";
-import Accordion from "@/components/Accordion";
+import Accordion from "@/components/Accordion/Accordion";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
