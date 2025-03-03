@@ -23,13 +23,13 @@ export default function Textparallax() {
 
   return (
     <main className="overflow-hidden">
-      <div className="mt-12" />
+      <div className="mt-" />
       <div ref={container}>
         <Slide direction={"left"} left={"-40%"} progress={scrollYProgress} />
         <Slide direction={"right"} left={"-25%"} progress={scrollYProgress} />
         <Slide direction={"left"} left={"-75%"} progress={scrollYProgress} />
       </div>
-      <div className="h-screen " />
+      <div className="h-56 " />
     </main>
   );
 }

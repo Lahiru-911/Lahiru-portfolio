@@ -56,13 +56,13 @@ const Home = () => {
               </h1> */}
               <PerspectiveText />
             </div>
-            <div className="grid grid-rows-2 m-4 md:m-6 lg:m-7 xl:m-8">
+            <div className="md:pt-10 m-4 md:m-6 lg:m-7 xl:m-8">
               {/* First Tagline */}
               <div className="my-1 md:my-0">
-                <h1 className="font-light w-full md:w-11/12 lg:w-10/12 xl:w-9/12 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl dm-sans-bold">
+                <h1 className="w-full md:w-11/12 lg:w-10/12 xl:w-9/12 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-aeonik font-semibold">
                   Who I Am
                 </h1>
-                <p className="text-justify my-1 md:my-3 lg:my-4 w-5/6 lg:w-10/12 xl:w-3/4 text-[#808080] text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl dm-sans-regular">
+                <p className="text-justify my-1 md:my-3 lg:my-4 w-5/6 lg:w-10/12 xl:w-3/4 text-[#808080] text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl font-aeonik">
                   Aspiring IT professional with a strong foundation in software
                   development and technology. With experience as a
                   <span className="font-semibold text-black dm-sans-regular">
@@ -80,8 +80,6 @@ const Home = () => {
                 </p>
               </div>
 
-              {/* Second Tagline */}
-              <div className="my-1 md:my-3 lg:my-4"></div>
             </div>
           </div>
 
