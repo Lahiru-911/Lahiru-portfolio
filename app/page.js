@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "@/components/preloader/Preloader";
@@ -112,64 +112,36 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2  gap-10 mx-">
-            {/* Project Card */}
-            <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-              {/* Card Header */}
-              <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg shadow-blue-gray-500/40"></div>
+            <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
+              <Image
+                src="/me11.webp" // Replace with the path to your image
+                alt="Project Image"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl"
+              />
+            </div>
 
-              {/* Card Content */}
-              <div className="p-6">
-                <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                  Tailwind Card
-                </h5>
-                <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  felis ligula.
-                </p>
-              </div>
+            {/* Card Body */}
+            <div className="relative flex flex-col rounded-xl bg-gray-100 p-6 shadow-md">
+              <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-800">
+                Project Title
+              </h5>
+              <p className="text-gray-600 text-base font-light leading-relaxed">
+                A brief description of the project or details.
+              </p>
 
-              {/* Card Footer */}
-              <div className="p-6 pt-0">
+              {/* Read More Button */}
+              <div className="mt-auto">
                 <button
                   type="button"
-                  className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-85 focus:shadow-none active:opacity-85 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                  className="w-full mt-4 rounded-lg bg-blue-500 py-3 text-white font-bold uppercase shadow-md transition-all hover:bg-blue-600 focus:outline-none"
                 >
                   Read More
                 </button>
               </div>
             </div>
-
-            {/* Add more cards as needed */}
-            <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-              {/* Card Header */}
-              <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg shadow-blue-gray-500/40"></div>
-
-              {/* Card Content */}
-              <div className="p-6">
-                <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                  Tailwind Card
-                </h5>
-                <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  felis ligula.
-                </p>
-              </div>
-
-              {/* Card Footer */}
-              <div className="p-6 pt-0">
-                <button
-                  type="button"
-                  className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-85 focus:shadow-none active:opacity-85 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                >
-                  Read More
-                </button>
-              </div>
-            </div>
-           
-           
           </div>
-
-
         </div>
       )}
     </div>
