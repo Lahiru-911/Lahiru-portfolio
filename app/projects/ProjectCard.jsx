@@ -52,12 +52,15 @@ const projects = [
     imageSrc: "/me11.webp", // Replace with the path to your image
     demoLink: "#", // Replace with the live demo link
   },
-  
 ];
 
 const ProjectCard = () => {
   return (
     <>
+      <h1 className="mx-6 md:mx-12 mb-14 p-3 text-3xl font-bold text-white md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-l from-blue-500 to-purple-600 hover:from-purple-500 hover:to-blue-600 font-poppins text-center md:text-left tracking-wider duration-500">
+        Featured Projects
+      </h1>
+
       {/* Project Card Container */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-24 md:gap-20 m-6 md:m-12">
         {/* Map over the projects array */}
@@ -110,9 +113,10 @@ const ProjectCard = () => {
                 href={project.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="select-none rounded-full bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               >
-                Explore More
+                <button className="cursor-pointer flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600 px-3 py-2 rounded-full text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 font-mono mt-4 w-auto sm:px-4 sm:py-2 md:px-5 md:py-2">
+                  Explore More
+                </button>
               </a>
             </div>
           </div>
