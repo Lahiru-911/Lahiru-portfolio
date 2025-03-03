@@ -2,7 +2,7 @@
 .container {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  height: 60vh;
+  height: 70vh;
   width: 50vw;
   display: flex;
   justify-content: flex-start; /* Align items to the left */
@@ -81,8 +81,7 @@
 }
 
 /* Medium screens (tablets) */
-@media (min-width: 641px) and (max-width: 1024px) {
-  
+@media (min-width: 641px) and (max-width: 1023px) {
   .textContainer p {
     font-size: 50px; /* Optimized for tablets */
     line-height: 55px;
@@ -94,7 +93,7 @@
 }
 
 /* Large screens (laptops and desktops) */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .textContainer p {
     font-size: 75px; /* Large but not overwhelming */
     line-height: 80px;
@@ -102,5 +101,6 @@
 
   .body {
     margin-top: 90px;
+    margin-left: 60px;
   }
 }
