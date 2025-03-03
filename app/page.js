@@ -7,6 +7,7 @@ import WordsMarquee from "@/components/WordsMarquee/page";
 import Textparallax from "@/components/Textparallax/page";
 import SocialMediaIcons from "@/components/GlobeAnimation/SocialMediaIcons";
 import PerspectiveText from "@/components/PerspectiveText/PerspectiveText";
+import Accordion from "@/components/Accordion";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -48,12 +49,7 @@ const Home = () => {
           {/* Why Residue Solution */}
           <div className="grid md:grid-cols-2 ml-4">
             <div>
-              {/* <h1 className="text-[#D8D8D8] text-left font-bold text-4xl sm:text-4xl md:text-6xl lg:text-8xl xl:text-[120px] 2xl:text-[160px]">
-                I'm,
-                <br />
-                Lahiru
-                <br /> Kavinda
-              </h1> */}
+              
               <PerspectiveText />
             </div>
             <div className="md:pt-10 m-4 md:m-6 lg:m-7 xl:m-8">
@@ -79,11 +75,13 @@ const Home = () => {
                   while maintaining high-quality software standards.
                 </p>
               </div>
-
             </div>
           </div>
 
           <Textparallax />
+          <div className="mx-5 md:mx-20 lg:mx-24 mb-16 md:mb-24 "  >
+            <Accordion />
+          </div>
         </div>
       )}
     </div>
