@@ -110,38 +110,6 @@ const Home = () => {
           <div className="mx-5 md:mx-20 lg:mx-24 mb-16 md:mb-24">
             <Accordion />
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2  gap-10 mx-">
-            <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
-              <Image
-                src="/me11.webp" // Replace with the path to your image
-                alt="Project Image"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-xl"
-              />
-            </div>
-
-            {/* Card Body */}
-            <div className="relative flex flex-col rounded-xl bg-gray-100 p-6 shadow-md">
-              <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-800">
-                Project Title
-              </h5>
-              <p className="text-gray-600 text-base font-light leading-relaxed">
-                A brief description of the project or details.
-              </p>
-
-              {/* Read More Button */}
-              <div className="mt-auto">
-                <button
-                  type="button"
-                  className="w-full mt-4 rounded-lg bg-blue-500 py-3 text-white font-bold uppercase shadow-md transition-all hover:bg-blue-600 focus:outline-none"
-                >
-                  Read More
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       )}
     </div>
