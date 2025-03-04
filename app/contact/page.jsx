@@ -7,17 +7,17 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="flex justify-center px-5 bg-[#121212]">
-      <div className="rounded-3xl bg-[#121212] w-full  h-auto p-6 shadow-lg">
+    <div className="flex justify-center p-10 bg-[#121212]">
+      <div className="rounded-3xl  w-full  h-auto p-6 shadow-lg  bg-black  shadow-green-400 outline outline-1 outline-green-600 ">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {/* Left Section */}
           <div className="space-y-4">
-            <h1 className="text-2xl font-light sm:text-3xl md:text-4xl lg:text-5xl mb-4">
+            <h1 className="text-white text-2xl font-light sm:text-3xl md:text-4xl lg:text-5xl mb-4">
               Hey! Tell us all the
               <br />
               <span className="text-[#0081FB]">things</span>
             </h1>
-            <p className="mb-4 text-xs font-normal sm:text-sm lg:text-base">
+            <p className="text-white mb-4 text-xs font-normal sm:text-sm lg:text-base">
               Give us a few details and we’ll offer the best solution.
             </p>
 
