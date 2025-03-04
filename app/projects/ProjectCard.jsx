@@ -67,7 +67,7 @@ const ProjectCard = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="relative flex flex-col w-full h-full rounded-xl bg-gray-50 text-gray-700 shadow-md transition-all duration-300 ease-in-out hover:scale-105"
+            className="relative flex flex-col w-full h-full rounded-xl bg-gradient-to-r from-[#fdfbfb] to-[#ebedee] text-gray-700 shadow-md transition-all duration-300 ease-in-out hover:scale-105"
           >
             {/* Project Card Header Section */}
             <div className="relative mx-4 -mt-6 h-64 sm:h-72 md:h-80 lg:h-96 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
@@ -81,25 +81,25 @@ const ProjectCard = () => {
             </div>
 
             {/* Project Description Section */}
-            <div className="p-6 flex-1">
+            <div className="px-6 pt-6 flex-1">
               {/* Project Title */}
-              <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+              <h5 className="mb-2 block font-sans text-xl md:text-3xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased">
                 {project.title}
               </h5>
 
               {/* Short Description */}
-              <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+              <p className="block font-sans text-base md:text-lg font-normal leading-relaxed text-inherit antialiased">
                 {project.description}
               </p>
 
               {/* Technologies Used Section */}
               <div className="mt-4">
-                <span className="inline-block text-xs text-gray-500">
+                <span className="inline-block font-medium text-base md:text-lg  text-gray-900">
                   Technologies:
                 </span>
                 <ul className="mt-2 flex flex-wrap gap-3">
                   {project.technologies.map((tech, idx) => (
-                    <li key={idx} className="text-sm text-blue-500 font-medium">
+                    <li key={idx} className="text-sm md:text-base text-blue-600 font-medium">
                       {tech}
                     </li>
                   ))}
