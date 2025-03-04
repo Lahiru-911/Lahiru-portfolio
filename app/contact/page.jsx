@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <div className="flex justify-center p-10 bg-[#121212]">
-      <div className="rounded-3xl  w-full  h-auto p-6 shadow-lg  bg-black  shadow-green-400 outline outline-1 outline-green-600 ">
+      <div className="rounded-3xl w-full h-auto p-6 shadow-lg bg-black shadow-blue-400 outline outline-1 outline-blue-600">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {/* Left Section */}
           <div className="space-y-4">
@@ -21,14 +21,27 @@ const Contact = () => {
               Give us a few details and we’ll offer the best solution.
             </p>
 
+            {/* Name Input */}
+            <input
+              placeholder="Name"
+              type="text"
+              className="w-full h-[40px] px-3 text-white bg-[#09090b] border border-white/10 rounded-lg focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-[#09090b] transition-all duration-150 ease-in-out"
+            />
 
+            {/* Contact Number Input */}
+            <input
+              placeholder="Contact Number"
+              type="tel"
+              className="w-full h-[40px] px-3 text-white bg-[#09090b] border border-white/10 rounded-lg focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-[#09090b] transition-all duration-150 ease-in-out"
+            />
 
-            <div className="flex h-[34px] text-[14px] text-white/60 w-[240px] items-center bg-[#09090b] border border-white/10 rounded-lg focus-within:ring-2 focus-within:ring-gray-700 focus-within:ring-offset-2 focus-within:ring-offset-[#09090b] transition-all duration-150 ease-in-out">
+            {/* Email */}
+            <div className="flex items-center w-full h-[40px] text-white/60 bg-[#09090b] border border-white/10 rounded-lg focus-within:ring-2 focus-within:ring-gray-700 focus-within:ring-offset-2 focus-within:ring-offset-[#09090b] transition-all duration-150 ease-in-out">
               <input
                 placeholder="Email"
                 type="text"
                 name="text"
-                className="bg-transparent text-[#f4f4f5] px-3 py-1 rounded-l-lg focus:outline-none w-full"
+                className="bg-transparent text-[#f4f4f5] px-3 py-1 focus:outline-none w-full"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +60,12 @@ const Contact = () => {
                 <path d="M3 7l9 6l9 -6"></path>
               </svg>
             </div>
+
+            {/* Message Textarea */}
+            <textarea
+              placeholder="Message"
+              className="w-full h-[100px] px-3 py-2 text-white bg-[#09090b] border border-white/10 rounded-lg focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-[#09090b] transition-all duration-150 ease-in-out"
+            ></textarea>
           </div>
 
           {/* Right Section (Map Box) */}
