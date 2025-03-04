@@ -43,7 +43,7 @@ export const ProjectParallaxDemo = ({ products }) => {
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-white"
+      className="h-[380vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-white"
     >
       <Header />
       <motion.div
@@ -121,7 +121,7 @@ export const ProductCard = ({ product, translate }) => {
         <Image
           src={product.thumbnail}
           height="600"
-          width="600"
+          width="400"
           className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />

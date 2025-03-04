@@ -6,15 +6,7 @@ const Projects = () => {
   return (
     <div>
       <ProjectParallax />
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      
       <ProjectCard />
       <br/>
       <br/>
