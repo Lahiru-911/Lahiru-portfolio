@@ -1,7 +1,25 @@
-import { ProjectParallax } from "@/components/ProjectParallax/projectparallax";
+"use client";
 import React from "react";
-import ProjectCard from "./ProjectCard";
+import dynamic from "next/dynamic";
 import Head from "next/head";
+
+const ProjectParallax = dynamic(
+  () =>
+    import("@/components/ProjectParallax/projectparallax").then(
+      (mod) => mod.ProjectParallax
+    ),
+  {
+    loading: () => <div>Loading Parallax...</div>,
+    ssr: false,
+  }
+);
+
+const ProjectCard = dynamic(
+  () => import("./ProjectCard").then((mod) => mod.default),
+  {
+    loading: () => <div>Loading Project...</div>,
+  }
+);
 
 const Projects = () => {
   return (
@@ -14,8 +32,8 @@ const Projects = () => {
         />
         <meta name="keywords" content="projects, software, React, Next.js" />
       </Head>
-      <ProjectParallax />
 
+      <ProjectParallax />
       <ProjectCard />
       <div className="h-10" />
     </div>
