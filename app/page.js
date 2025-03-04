@@ -71,7 +71,7 @@ const Home = () => {
                   intuitive and visually appealing user experiences.
                   Detail-oriented and skilled in identifying and documenting
                   software issues, ensuring optimal performance and user
-                  satisfaction. A proactive collaborator who works closely with
+                  satisfaction. <br/>A proactive collaborator who works closely with
                   development teams to implement efficient, innovative solutions
                   while maintaining high-quality software standards.
                 </p>

@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <div>
+    <div className="bg-[#121212]">
       <ProjectParallax />
       
       <ProjectCard />

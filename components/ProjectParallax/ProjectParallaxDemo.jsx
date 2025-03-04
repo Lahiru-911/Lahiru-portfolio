@@ -43,7 +43,7 @@ export const ProjectParallaxDemo = ({ products }) => {
   return (
     <div
       ref={ref}
-      className="h-[380vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-white"
+      className="h-[380vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -90,10 +90,10 @@ export const ProjectParallaxDemo = ({ products }) => {
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold text-black font-hedvig">
+      <h1 className="text-2xl md:text-7xl font-bold text-white font-hedvig">
         See How <br /> I Make Ideas Real
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-black">
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-200">
         I craft innovative and impactful solutions using the latest technologies
         and frameworks. As a passionate developer, I am committed to bringing
         ideas to life with precision and creativity.
@@ -116,6 +116,7 @@ export const ProductCard = ({ product, translate }) => {
     >
       <Link
         href={product.link}
+        target="_blank" 
         className="block group-hover/product:shadow-2xl "
       >
         <Image
