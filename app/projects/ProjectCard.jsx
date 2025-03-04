@@ -99,7 +99,10 @@ const ProjectCard = () => {
                 </span>
                 <ul className="mt-2 flex flex-wrap gap-3">
                   {project.technologies.map((tech, idx) => (
-                    <li key={idx} className="text-sm md:text-base text-blue-600 font-medium">
+                    <li
+                      key={idx}
+                      className="text-sm md:text-base text-blue-600 font-medium"
+                    >
                       {tech}
                     </li>
                   ))}
