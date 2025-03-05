@@ -1,4 +1,5 @@
 "use client";
+import { WavyBackground } from "@/components/WavyBackground/WavyBackground";
 import { useState, useEffect } from "react";
 
 const InputField = ({ placeholder, type, icon, name, value, onChange }) => (
@@ -124,80 +125,86 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center p-10 bg-[#121212]">
-      <div className="rounded-3xl w-full h-auto p-6 shadow-lg bg-black shadow-blue-400 outline outline-1 outline-blue-600">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {/* Left Section */}
-          <div className="space-y-4">
-            <h1 className="text-white text-2xl font-light sm:text-3xl md:text-4xl lg:text-5xl mb-4">
-              Hey! Tell us all the <br />
-              <span className="text-[#0081FB]">things</span>
-            </h1>
-            <p className="text-white mb-4 text-xs font-normal sm:text-sm lg:text-base">
-              Give us a few details and we’ll offer the best solution.
-            </p>
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <InputField
-                placeholder="Name"
-                type="text"
-                icon={icons.name}
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-              />
-              <InputField
-                placeholder="Contact Number"
-                type="tel"
-                icon={icons.phone}
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-              <InputField
-                placeholder="Email"
-                type="email"
-                icon={icons.email}
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              <textarea
-                name="message"
-                placeholder="Message"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full h-[100px] px-3 py-2 text-white bg-[#09090b] border border-white/10 rounded-lg focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-[#09090b] focus:outline-none transition-all duration-150 ease-in-out bg-transparent"
-              ></textarea>
-              {/* Hidden Access Key Field */}
-              <input
-                type="hidden"
-                name="access_key"
-                value="e86b5632-b553-48e3-9b74-f8cbe7ab19fe"
-              />
-              <button type="submit" className="group relative w-full">
-                <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 opacity-75 blur transition duration-300 group-hover:opacity-100"></div>
-                <span className="relative flex justify-center items-center rounded-2xl bg-black px-10 py-3 leading-none">
-                  <span className="text-sm md:text-base font-medium text-white uppercase">
-                    Submit
+    <>
+      <div className="flex justify-center p-10 bg-[#121212]">
+        <div className="rounded-3xl w-full h-auto p-6 shadow-lg bg-black shadow-blue-400 outline outline-1 outline-blue-600">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {/* Left Section */}
+            <div className="space-y-4">
+              <h1 className="text-white text-2xl font-light sm:text-3xl md:text-4xl lg:text-5xl mb-4">
+                Hey! Tell us all the <br />
+                <span className="text-[#0081FB]">things</span>
+              </h1>
+              <p className="text-white mb-4 text-xs font-normal sm:text-sm lg:text-base">
+                Give us a few details and we’ll offer the best solution.
+              </p>
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <InputField
+                  placeholder="Name"
+                  type="text"
+                  icon={icons.name}
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                <InputField
+                  placeholder="Contact Number"
+                  type="tel"
+                  icon={icons.phone}
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+                <InputField
+                  placeholder="Email"
+                  type="email"
+                  icon={icons.email}
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full h-[100px] px-3 py-2 text-white bg-[#09090b] border border-white/10 rounded-lg focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-[#09090b] focus:outline-none transition-all duration-150 ease-in-out bg-transparent"
+                ></textarea>
+                {/* Hidden Access Key Field */}
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="e86b5632-b553-48e3-9b74-f8cbe7ab19fe"
+                />
+                <button type="submit" className="group relative w-full">
+                  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 opacity-75 blur transition duration-300 group-hover:opacity-100"></div>
+                  <span className="relative flex justify-center items-center rounded-2xl bg-black px-10 py-3 leading-none">
+                    <span className="text-sm md:text-base font-medium text-white uppercase">
+                      Submit
+                    </span>
                   </span>
-                </span>
-              </button>
-            </form>
-          </div>
+                </button>
+              </form>
+            </div>
 
-          {/* Right Section (Map Box) */}
-          <div className="hidden sm:block">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15844.202952738427!2d79.858473!3d6.884526!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b001c3e29e3%3A0xe6643f6b87d2e1ed!2sResidue%20Solution%20Pvt%20Ltd!5e0!3m2!1sen!2slk!4v1729247413914!5m2!1sen!2slk"
-              className="w-full h-full rounded-[20px]"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            {/* Right Section (Map Box) */}
+            <div className="hidden sm:block">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15844.202952738427!2d79.858473!3d6.884526!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b001c3e29e3%3A0xe6643f6b87d2e1ed!2sResidue%20Solution%20Pvt%20Ltd!5e0!3m2!1sen!2slk!4v1729247413914!5m2!1sen!2slk"
+                className="w-full h-full rounded-[20px]"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div>
+        <WavyBackground/>
+      </div>
+    </>
   );
 };
 
