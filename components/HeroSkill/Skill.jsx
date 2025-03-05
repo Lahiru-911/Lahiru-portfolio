@@ -5,14 +5,14 @@ import Image from "next/image";
 
 export function Skill() {
   return (
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden ">
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black ">
-             My Technological Expertise <br />
+            <h1 className="text-4xl font-semibold text-white mb-5">
+              My Technological Expertise <br />
               <span className="text-4xl md:text-[4rem] font-bold mt-1 leading-none">
-              Scroll Through My Expertise
+                Scroll Through My Expertise
               </span>
             </h1>
           </>
@@ -23,8 +23,24 @@ export function Skill() {
           alt="hero"
           height={720}
           width={1400}
-          className="mx-auto rounded-2xl object-cover w-full max-w-[1400px] h-auto"
+          className="mx-auto hidden md:block rounded-2xl object-cover h-full object-left-top"
           draggable={false}
+          quality={100}
+          priority
+          
+          
+        />
+        <Image
+          src="/me14.webp"
+          alt="hero"
+          height={720}
+          width={1400}
+          className="mx-auto rounded-2xl object-cover h-full object-left-top"
+          draggable={false}
+          quality={100}
+          priority
+          
+          
         />
       </ContainerScroll>
     </div>

@@ -3,7 +3,7 @@ import { TimelineExp } from "@/components/Timeline/TimelineExp";
 import React from "react";
 
 const AllThree = () => {
-  return <div>
+  return <div className="bg-black">
 
     <Skill/>
     <TimelineExp/>
