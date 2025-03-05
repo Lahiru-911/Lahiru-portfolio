@@ -18,6 +18,7 @@ export function Skill() {
           </>
         }
       >
+        {/* First Img */}
         <Image
           src="https://ui.aceternity.com/_next/image?url=%2Flinear.webp&w=1920&q=75"
           alt="hero"
@@ -27,20 +28,17 @@ export function Skill() {
           draggable={false}
           quality={100}
           priority
-          
-          
         />
+        {/* Second Img */}
         <Image
           src="/me14.webp"
           alt="hero"
           height={720}
           width={1400}
-          className="mx-auto rounded-2xl object-cover h-full object-left-top"
+          className="mx-auto rounded-2xl block md:hidden object-cover h-full object-left-top"
           draggable={false}
           quality={100}
           priority
-          
-          
         />
       </ContainerScroll>
     </div>
