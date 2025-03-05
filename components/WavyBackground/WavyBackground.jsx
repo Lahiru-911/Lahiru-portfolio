@@ -5,14 +5,14 @@ import { IoLocationSharp } from "react-icons/io5";
 
 export function WavyBackground() {
   return (
-    <WavySource  className="font-normal text-white font-inter ">
+    <WavySource className="font-normal text-white font-inter ">
       {/* Main heading section */}
       <div className="text-center">
         <p className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl md:mt-16 font-bold">
           We’d Love To Hear From <a className="text-[#0081FB]">You.</a>
         </p>
 
-        <p className="p-2 m-2 text-base font-light sm:p-3 sm:m-4 sm:text-lg md:text-2xl lg:text-xl xl:text-2xl font-semibold">
+        <p className="p-2 m-2 text-base sm:p-3 sm:m-4 sm:text-lg md:text-2xl lg:text-xl xl:text-2xl font-semibold">
           Have Questions, Need Support, or Want to Share Feedback? Our Team is
           Here to Assist You Every Step of the Way.
           <br />
@@ -34,7 +34,6 @@ export function WavyBackground() {
             >
               (+94) 77 578 8667
             </a>
-            
           </p>
         </div>
 
@@ -50,7 +49,6 @@ export function WavyBackground() {
             >
               lahiruxk@gmail.com
             </a>
-            
           </p>
         </div>
 
@@ -64,7 +62,6 @@ export function WavyBackground() {
               target="_blank"
               rel="noopener noreferrer"
             >
-             
               Colombo,
               <br />
               Sri Lanka.
