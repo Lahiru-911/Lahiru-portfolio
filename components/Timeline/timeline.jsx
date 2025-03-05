@@ -24,12 +24,12 @@ export const Timeline = ({ data }) => {
 
   return (
     <div className="w-full bg-black font-sans md:px-10" ref={containerRef}>
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-4xl font-semibold text-white md:text-8xl mb-4 max-w-4xl">
-          Career Milestones
+      <div className="max-w-7xl mx-auto py-16 px-4 md:px-8 lg:px-10">
+        <h2 className="text-3xl font-semibold text-white md:text-6xl mb-4 max-w-4xl">
+          Professional & Educational Milestones
         </h2>
-        <p className="text-gray-300 text-sm md:text-base max-w-2xl italic">
-        A detailed overview of the key milestones and accomplishments in my career journey. From my first role to my current position, this timeline highlights the pivotal moments that have shaped my professional growth and success.
+        <p className="text-gray-300 text-base md:text-lg max-w-2xl italic">
+        A comprehensive overview of the key milestones in my career and education journey. From my academic foundation to my professional growth, this timeline highlights the pivotal moments that have shaped both my learning and career success.
         </p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
@@ -42,7 +42,7 @@ export const Timeline = ({ data }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500">
                 {item.title}
               </h3>
             </div>
