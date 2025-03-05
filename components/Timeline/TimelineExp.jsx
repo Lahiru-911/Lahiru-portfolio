@@ -8,7 +8,7 @@ export function TimelineExp() {
     {
       title: "2024 Aug - Present",
       content: (
-        <div className="mb-16 ">
+        <div className="mb-28">
           <h1 className="text-white text-lg md:text-3xl font-semibold mb-0 md:mb-1">
             Intern Software Engineer
           </h1>
@@ -18,18 +18,17 @@ export function TimelineExp() {
           <p className="text-white text-xs md:text-base font-light italic text-justify">
             {" "}
             "Leading test automation and performance testing for enterprise
-            applications.Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built."
+            applications.Lorem ipsum is for people who are too lazy to write
+            copy. But we are not. Here are some more example of beautiful
+            designs I built."
           </p>
-          
-         
         </div>
       ),
     },
     {
       title: "2021 May - 2025 Jan",
       content: (
-        <div>
+        <div className="mb-28">
           <h1 className="text-white text-lg md:text-3xl font-semibold mb-0 md:mb-1">
             Intern Software Engineer
           </h1>
@@ -39,17 +38,17 @@ export function TimelineExp() {
           <p className="text-white text-xs md:text-base font-light italic">
             {" "}
             "Leading test automation and performance testing for enterprise
-            applications.Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built."
+            applications.Lorem ipsum is for people who are too lazy to write
+            copy. But we are not. Here are some more example of beautiful
+            designs I built."
           </p>
-         
         </div>
       ),
     },
     {
-      title: "2020 Nov - 2021 May",
+      title: "2006 Dec - 2019 Aug",
       content: (
-        <div>
+        <div className="mb-28">
           <h1 className="text-white text-lg md:text-3xl font-semibold mb-0 md:mb-1">
             Intern Software Engineer
           </h1>
@@ -59,17 +58,17 @@ export function TimelineExp() {
           <p className="text-white text-xs md:text-base font-light italic">
             {" "}
             "Leading test automation and performance testing for enterprise
-            applications.Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built."
+            applications.Lorem ipsum is for people who are too lazy to write
+            copy. But we are not. Here are some more example of beautiful
+            designs I built."
           </p>
-         
         </div>
       ),
     },
     {
       title: "2021 Nov - 2022 May",
       content: (
-        <div>
+        <div className="">
           <h1 className="text-white text-lg md:text-3xl font-semibold mb-0 md:mb-1">
             Intern Software Engineer
           </h1>
@@ -79,14 +78,13 @@ export function TimelineExp() {
           <p className="text-white text-xs md:text-base font-light italic">
             {" "}
             "Leading test automation and performance testing for enterprise
-            applications.Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built."
+            applications.Lorem ipsum is for people who are too lazy to write
+            copy. But we are not. Here are some more example of beautiful
+            designs I built."
           </p>
-         
         </div>
       ),
     },
-    
   ];
   return (
     <div className="w-full">
