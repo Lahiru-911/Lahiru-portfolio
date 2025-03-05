@@ -166,7 +166,7 @@ const Contact = () => {
                 placeholder="Message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full h-[100px] px-3 py-2 text-white bg-[#09090b] border border-white/10 rounded-lg focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-[#09090b] focus:outline-none transition-all duration-150 ease-in-out"
+                className="w-full h-[100px] px-3 py-2 text-white bg-[#09090b] border border-white/10 rounded-lg focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-[#09090b] focus:outline-none transition-all duration-150 ease-in-out bg-transparent"
               ></textarea>
               {/* Hidden Access Key Field */}
               <input
