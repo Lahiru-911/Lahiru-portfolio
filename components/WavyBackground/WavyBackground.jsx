@@ -5,14 +5,14 @@ import { IoLocationSharp } from "react-icons/io5";
 
 export function WavyBackground() {
   return (
-    <WavySource className="font-normal text-black font-inter">
+    <WavySource  className="font-normal text-white font-inter ">
       {/* Main heading section */}
       <div className="text-center">
-        <p className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl md:mt-16">
+        <p className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl md:mt-16 font-bold">
           We’d Love To Hear From <a className="text-[#0081FB]">You.</a>
         </p>
 
-        <p className="p-2 m-2 text-base font-light sm:p-3 sm:m-4 sm:text-lg md:text-2xl lg:text-xl xl:text-2xl">
+        <p className="p-2 m-2 text-base font-light sm:p-3 sm:m-4 sm:text-lg md:text-2xl lg:text-xl xl:text-2xl font-semibold">
           Have Questions, Need Support, or Want to Share Feedback? Our Team is
           Here to Assist You Every Step of the Way.
           <br />
@@ -30,17 +30,11 @@ export function WavyBackground() {
             <br />
             <a
               href="tel:(+94) 74 277 7201"
-              className="text-black hover:text-[#0081FB]"
+              className="text-white hover:text-[#0081FB]"
             >
-              (+94) 74 277 7201
+              (+94) 77 578 8667
             </a>
-            <br />
-            <a
-              href="tel:(+94) 74 271 8994"
-              className="text-black hover:text-[#0081FB]"
-            >
-              (+94) 74 271 8994
-            </a>
+            
           </p>
         </div>
 
@@ -48,28 +42,15 @@ export function WavyBackground() {
         <div className="flex flex-col items-center w-full gap-3  text-center transition-all duration-300 ease-in-out md:w-auto md:items-start md:text-left md:flex-row">
           <MdEmail className="text-xl sm:text-2xl md:text-3xl mt-1" />
           <p className="text-xs sm:text-sm md:text-base lg:text-lg">
-            Our Email
+            Email
             <br />
             <a
-              className="text-black hover:text-[#0081FB]"
+              className="text-white hover:text-[#0081FB]"
               href="mailto:prabath@residuesolution.com"
             >
-              prabath@residuesolution.com
+              lahiruxk@gmail.com
             </a>
-            <br />
-            <a
-              className="text-black hover:text-[#0081FB]"
-              href="mailto:prabath@residuesolution.com"
-            >
-              mkting@residuesolution.com
-            </a>
-            <br />
-            <a
-              className="text-black hover:text-[#0081FB]"
-              href="mailto:prabath@residuesolution.com"
-            >
-              info@residuesolution.com
-            </a>
+            
           </p>
         </div>
 
@@ -78,16 +59,15 @@ export function WavyBackground() {
           <IoLocationSharp className="text-xl sm:text-2xl md:text-3xl mt-1" />
           <address className="text-xs sm:text-sm md:text-base lg:text-lg">
             <a
-              className="text-black hover:text-[#0081FB] not-italic"
-              href="https://maps.app.goo.gl/bnu6oNjbhpJUdtbEA"
+              className="text-white hover:text-[#0081FB] not-italic"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
             >
-              No. 323,
+             
+              Colombo,
               <br />
-              Colombo Main Road,
-              <br />
-              Colombo 05.
+              Sri Lanka.
             </a>
           </address>
         </div>

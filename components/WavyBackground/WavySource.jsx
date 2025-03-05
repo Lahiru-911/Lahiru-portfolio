@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "../../lib/utils";
 import React, { useEffect, useRef, useState } from "react";
 import { createNoise3D } from "simplex-noise";
@@ -8,10 +9,10 @@ export const WavySource = ({
   containerClassName,
   colors,
   waveWidth,
-  backgroundFill = "#E6F2FF",
   blur = 10,
   speed = "fast",
   waveOpacity = 0.5,
+  backgroundFill = "transparent", // Ensure this is transparent
   ...props
 }) => {
   const noise = createNoise3D();
@@ -60,7 +61,7 @@ export const WavySource = ({
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
         var y = noise(x / 800, 0.3 * i, nt) * 100;
-        ctx.lineTo(x, y + h * 0.15);
+        ctx.lineTo(x, y + h * 0.15); // Adjust to desired wave position
       }
       ctx.stroke();
       ctx.closePath();
@@ -69,11 +70,8 @@ export const WavySource = ({
 
   let animationId;
   const render = () => {
-    ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = backgroundFill || "black";
-    ctx.globalAlpha = waveOpacity || 0.5;
-    ctx.fillRect(0, 0, w, h);
-    drawWave(5);
+    ctx.clearRect(0, 0, w, h); // Clears the canvas
+    drawWave(5); // Draw the waves
     animationId = requestAnimationFrame(render);
   };
 
@@ -97,7 +95,8 @@ export const WavySource = ({
     <div
       className={cn(
         "h-fit w-full relative overflow-hidden",
-        containerClassName
+        containerClassName,
+        "bg-transparent" // Ensure background is transparent here
       )}
       {...props}
     >

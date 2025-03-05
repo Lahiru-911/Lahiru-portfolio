@@ -125,7 +125,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <div className="bg-[#121212]">
       <div className="flex justify-center p-10 bg-[#121212]">
         <div className="rounded-3xl w-full h-auto p-6 shadow-lg bg-black shadow-blue-400 outline outline-1 outline-blue-600">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -201,10 +201,10 @@ const Contact = () => {
         </div>
       </div>
 
-      <div>
+      <div className="mt-5">
         <WavyBackground/>
       </div>
-    </>
+    </div>
   );
 };
 
