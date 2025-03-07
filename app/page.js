@@ -41,7 +41,7 @@ const Home = () => {
       </AnimatePresence>
 
       {!isLoading && (
-        <div>
+        <div className="">
           {/* Hero Section */}
           <HeroSection />
 
