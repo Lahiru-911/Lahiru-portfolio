@@ -126,7 +126,7 @@ const Contact = () => {
 
   return (
     <div className="bg-[#121212]">
-      <div className="flex justify-center p-10 bg-[#121212]">
+      <div className="flex justify-center p-5 md:p-10 pt-16 md:pt-20 bg-[#121212]">
         <div className="rounded-3xl w-full h-auto p-6 shadow-lg bg-black shadow-blue-400 outline outline-1 outline-blue-600">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Left Section */}
@@ -138,7 +138,7 @@ const Contact = () => {
               <p className="text-white mb-4 text-xs font-normal sm:text-sm lg:text-base">
                 Give us a few details and we’ll offer the best solution.
               </p>
-              <form className="space-y-4" onSubmit={handleSubmit}>
+              <form className="space-y-4 text-sm md:text-base" onSubmit={handleSubmit}>
                 <InputField
                   placeholder="Name"
                   type="text"
