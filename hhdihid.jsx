@@ -1,88 +1,131 @@
-"use client";
-import Image from "next/image";
-import React from "react";
-import { WobbleCard } from "./wobble-card.tsx";
+// "use client";
+// import Link from "next/link";
+// import React from "react";
+// import { RiArrowRightUpLine } from "react-icons/ri";
+// import { FaArrowUp } from "react-icons/fa";
 
-export function Blard() {
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
-      <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
-        className=""
-      >
-        <div className="max-w-xs">
-          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Gippity AI powers the entire universe
-          </h2>
-          <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
-          </p>
-        </div>
-        <Image
-          src="/me14.webp"
-          width={500}
-          height={500}
-          alt="linear demo image"
-          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
-        />
-      </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-gray-700">
-        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          No shirt, no shoes, no weapons.
-        </h2>
-        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          If someone yells “stop!”, goes limp, or taps out, the fight is over.
-        </p>
-      </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
-        <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Signup for blazing-fast cutting-edge state of the art Gippity AI
-            wrapper today!
-          </h2>
-          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
-          </p>
-        </div>
-        <Image
-          src="/me14.webp"
-          width={500}
-          height={500}
-          alt="linear demo image"
-          className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
-        />
-      </WobbleCard>
-      {/* Fourth BlogCard with Green Background */}
-      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-green-800">
-        <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          Future of AI technology and its possibilities
-        </h2>
-        <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
-          AI technology is revolutionizing the way we interact with the world,
-          and its potential is limitless.
-        </p>
-      </WobbleCard>
-      {/* Fifth BlogCard with Purple Background */}
-      <WobbleCard containerClassName="col-span-1 lg:col-span-2 h-full bg-purple-700 min-h-[500px] lg:min-h-[300px]">
-        <div className="max-w-xs">
-          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Revolutionizing healthcare with AI solutions
-          </h2>
-          <p className="mt-4 text-left text-base/6 text-neutral-200">
-            Artificial Intelligence is playing a key role in transforming
-            healthcare, improving diagnostics, and patient care.
-          </p>
-        </div>
-        <Image
-          src="/me14.webp"
-          width={500}
-          height={500}
-          alt="linear demo image"
-          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
-        />
-      </WobbleCard>
-    </div>
-  );
-}
+// const navigationLinks = [
+//   { name: "About Me", link: "/" },
+//   { name: "Projects", link: "/projects" },
+//   { name: "Contact", link: "/contact" },
+//   { name: "Skills", link: "/skills" },
+//   { name: "Experience", link: "/experience" },
+//   { name: "Education", link: "/education" },
+//   { name: "Blog", link: "/blog" },
+// ];
+
+// const socialLinks = [
+//   { name: "LinkedIn", link: "https://www.linkedin.com" },
+//   { name: "Facebook", link: "https://www.facebook.com" },
+//   { name: "Instagram", link: "https://www.instagram.com" },
+//   { name: "WhatsApp", link: "https://wa.me/" },
+//   { name: "GitHub", link: "https://github.com" },
+//   { name: "Behance", link: "https://www.behance.net" },
+//   { name: "YouTube", link: "https://www.youtube.com" },
+// ];
+
+// const contactLinks = [
+//   { name: "Email", link: "mailto:lahiruxk@gmail.com" },
+//   { name: "Phone", link: "tel:+94775788667" },
+//   { name: "Location", link: "https://www.google.com/maps" },
+// ];
+
+// const Footer = () => {
+//   return (
+//     <footer className="bg-black text-white  py-6 rounded-t-3xl h-full w-full">
+//       <div className="px-6 md:px-16 lg:px-20 max-w-screen-xl mx-auto">
+//         {/* === Header Section === */}
+//         <div className="hidden md:block">
+//           <h2 className="text-xs sm:text-sm md:text-base font-semibold tracking-widest mb-1">
+//             INTERESTED IN LEARNING MORE?
+//           </h2>
+//           <Link
+//             href="/contact"
+//             className="flex items-center space-x-2 mb-5 hover:text-blue-500 transition"
+//           >
+//             <h1 className="font-radley text-3xl md:text-5xl font-bold">
+//               Connect with me
+//             </h1>
+//             <RiArrowRightUpLine className="text-2xl md:text-5xl" />
+//           </Link>
+//         </div>
+
+//         {/* === Links Section === */}
+//         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-2 md:pt-4">
+//           {/* Navigation Links */}
+//           <FooterColumn title="NAVIGATION" links={navigationLinks} />
+
+//           {/* Social Links */}
+//           <FooterColumn title="SOCIALS" links={socialLinks} isExternal />
+
+//           {/* Contact Links */}
+//           <FooterColumn title="CONTACT" links={contactLinks} isExternal />
+//         </div>
+
+//         {/* === Copyright Section === */}
+//         <div className="flex items-center justify-center text-white text-xs md:text-sm mt-6">
+//           <span className="flex-1 border-t border-white"></span>
+//           <span className="px-2">
+//             © 2025 Lahiru Kavinda. All Rights Reserved.
+//           </span>
+//           <span className="flex-1 border-t border-white"></span>
+//         </div>
+//       </div>
+
+//       {/* === Footer Branding & Scroll to Top Button === */}
+//       <div className="grid grid-cols-12">
+//         {/* Name Branding */}
+//         <div className="col-span-11 flex items-center justify-center">
+//           <h1 className="text-white font-bold text-[15vw] leading-none tracking-wide font-hedvig">
+//             L A H I R U
+//           </h1>
+//         </div>
+
+//         {/* Scroll to Top Button */}
+//         <div className="col-span-1 flex justify-center items-end pr-2">
+//           <button
+//             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+//             className="fixed bottom-5 right-5 shadow-2xl ring-1 ring-gray-900/10 bg-gray-700 hover:bg-gray-500 text-white p-3 rounded-full transition"
+//             aria-label="Scroll to top"
+//           >
+//             <FaArrowUp />
+//           </button>
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// };
+
+// const FooterColumn = ({ title, links, isExternal = false }) => (
+//   <div>
+//     <h3 className="font-bold mb-3 border-b border-gray-50">{title}</h3>
+//     <ul className="space-y-2 md:space-y-4 font-light md:text-lg">
+//       {links.map((item) => (
+//         <li key={item.name} className="cursor-pointer">
+//           <LinkOrAnchor href={item.link} isExternal={isExternal}>
+//             {item.name}
+//           </LinkOrAnchor>
+//         </li>
+//       ))}
+//     </ul>
+//   </div>
+// );
+
+// const LinkOrAnchor = ({ href, children, isExternal }) =>
+//   isExternal ? (
+//     <a
+//       href={href}
+//       className="flex items-center gap-2 text-white hover:text-gray-300 transition"
+//       target="_blank"
+//       rel="noopener noreferrer"
+//     >
+//       {children}
+//       <RiArrowRightUpLine className="hidden group-hover:inline-block transition-all text-lg" />
+//     </a>
+//   ) : (
+//     <Link href={href} className="text-white hover:text-gray-300 transition">
+//       {children}
+//     </Link>
+//   );
+
+// export default Footer;
