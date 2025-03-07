@@ -158,13 +158,13 @@ const Content = () => {
           </div>
 
           {/* === Links Section === */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 md:pt-4 ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 md:pt-4 text-xs md:text-base ">
             {/* Navigation Links */}
             <div>
               <h3 className="font-bold mb-3 border-b border-gray-50">
                 NAVIGATION
               </h3>
-              <ul className="space-y-1 md:space-y-4 font-light md:text-lg">
+              <ul className="space-y-1 md:space-y-4 font-light ">
                 {[
                   { name: "About Me", link: "/" },
                   { name: "Projects", link: "/projects" },
@@ -191,7 +191,7 @@ const Content = () => {
               <h3 className="font-bold mb-3 border-b border-gray-50">
                 SOCIALS
               </h3>
-              <ul className="space-y-1 md:space-y-4 font-light md:text-lg">
+              <ul className="space-y-1 md:space-y-4 font-light ">
                 {[
                   { name: "LinkedIn", link: "https://www.linkedin.com" },
                   { name: "Facebook", link: "https://www.facebook.com" },
@@ -224,7 +224,7 @@ const Content = () => {
               <h3 className="font-bold mb-3 border-b border-gray-50">
                 CONTACT
               </h3>
-              <ul className="space-y-1 md:space-y-4 font-light md:text-lg">
+              <ul className="space-y-1 md:space-y-4 font-light ">
                 {[
                   { name: "Email", link: "mailto:lahiruxk@gmail.com" },
                   { name: "Phone", link: "tel:+94775788667" },
