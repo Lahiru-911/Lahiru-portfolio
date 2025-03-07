@@ -21,7 +21,7 @@ export default function index({ closeMenu }) {
                 exit="exit"
                 className="dm-sans-regular"
               >
-                <Link href={href} onClick={closeMenu}>
+                <Link href={href} onClick={closeMenu} aria-label={`Go to ${title}`}>
                   <span>{title}</span>
                 </Link>
               </motion.div>

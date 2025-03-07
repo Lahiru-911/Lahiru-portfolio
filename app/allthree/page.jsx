@@ -5,8 +5,12 @@ import React from "react";
 const AllThree = () => {
   return (
     <div className="bg-black">
-      <Skill />
-      <TimelineExp />
+      <section>
+        <Skill />
+      </section>
+      <section>
+        <TimelineExp />
+      </section>
     </div>
   );
 };
