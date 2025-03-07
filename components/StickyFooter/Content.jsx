@@ -249,7 +249,7 @@ const Content = () => {
           </div>
 
           {/* === Copyright Section === */}
-          <div className="flex items-center justify-center text-white text-xs md:text-sm mt-5">
+          <div className="flex items-center justify-center text-white text-xs md:text-sm mt-4">
             <span className="flex-1 border-t border-white"></span>
             <span className="px-1 md:px-2">
               © 2025 Lahiru Kavinda. All Rights Reserved.
