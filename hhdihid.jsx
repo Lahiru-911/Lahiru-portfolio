@@ -1,80 +1,88 @@
-// "use client";
-// import { useScroll, useTransform, motion } from "framer-motion";
-// import React, { useEffect, useRef, useState } from "react";
+"use client";
+import Image from "next/image";
+import React from "react";
+import { WobbleCard } from "./wobble-card.tsx";
 
-// export const Timeline = ({ data }) => {
-//   const ref = useRef(null);
-//   const containerRef = useRef(null);
-//   const [height, setHeight] = useState(0);
-
-//   useEffect(() => {
-//     if (ref.current) {
-//       const rect = ref.current.getBoundingClientRect();
-//       setHeight(rect.height);
-//     }
-//   }, [ref]);
-
-//   const { scrollYProgress } = useScroll({
-//     target: containerRef,
-//     offset: ["start 10%", "end 50%"],
-//   });
-
-//   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-//   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-
-//   return (
-//     <div className="w-full bg-black font-sans md:px-10" ref={containerRef}>
-//       <div className="max-w-7xl mx-auto py-16 px-4 md:px-8 lg:px-10">
-//         <h2 className="text-3xl font-semibold text-white md:text-6xl mb-4 max-w-4xl">
-//           Professional & Educational Milestones
-//         </h2>
-//         <p className="text-gray-300 text-base md:text-lg max-w-2xl italic">
-//         A comprehensive overview of the key milestones in my career and education journey. From my academic foundation to my professional growth, this timeline highlights the pivotal moments that have shaped both my learning and career success.
-//         </p>
-//       </div>
-
-
-
-
-        // {data.map((item, index) => (
-        //   <div
-        //     key={index}
-        //     className="flex justify-start pt-10 md:pt-40 md:gap-10"
-        //   >
-        //     <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-        //       <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white flex items-center justify-center">
-        //         <div className="h-4 w-4 rounded-full bg-neutral-200 border border-neutral-300 p-2" />
-        //       </div>
-        //       <h3 className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500">
-        //         {item.title}
-        //       </h3>
-        //     </div>
-
-        //     <div className="relative pl-20 pr-4 md:pl-4 w-full">
-        //       <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500">
-        //         {item.title}
-        //       </h3>
-        //       {item.content}
-        //     </div>
-        //   </div>
-        // ))}
-
-
-//         <div
-//           style={{
-//             height: height + "px",
-//           }}
-//           className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
-//         >
-//           <motion.div
-//             style={{
-//               height: heightTransform,
-//               opacity: opacityTransform,
-//             }}
-//             className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+export function Blard() {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+      <WobbleCard
+        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+        className=""
+      >
+        <div className="max-w-xs">
+          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            Gippity AI powers the entire universe
+          </h2>
+          <p className="mt-4 text-left  text-base/6 text-neutral-200">
+            With over 100,000 mothly active bot users, Gippity AI is the most
+            popular AI platform for developers.
+          </p>
+        </div>
+        <Image
+          src="/me14.webp"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+        />
+      </WobbleCard>
+      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-gray-700">
+        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          No shirt, no shoes, no weapons.
+        </h2>
+        <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+          If someone yells “stop!”, goes limp, or taps out, the fight is over.
+        </p>
+      </WobbleCard>
+      <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+        <div className="max-w-sm">
+          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            Signup for blazing-fast cutting-edge state of the art Gippity AI
+            wrapper today!
+          </h2>
+          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
+            With over 100,000 mothly active bot users, Gippity AI is the most
+            popular AI platform for developers.
+          </p>
+        </div>
+        <Image
+          src="/me14.webp"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+        />
+      </WobbleCard>
+      {/* Fourth BlogCard with Green Background */}
+      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-green-800">
+        <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          Future of AI technology and its possibilities
+        </h2>
+        <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
+          AI technology is revolutionizing the way we interact with the world,
+          and its potential is limitless.
+        </p>
+      </WobbleCard>
+      {/* Fifth BlogCard with Purple Background */}
+      <WobbleCard containerClassName="col-span-1 lg:col-span-2 h-full bg-purple-700 min-h-[500px] lg:min-h-[300px]">
+        <div className="max-w-xs">
+          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+            Revolutionizing healthcare with AI solutions
+          </h2>
+          <p className="mt-4 text-left text-base/6 text-neutral-200">
+            Artificial Intelligence is playing a key role in transforming
+            healthcare, improving diagnostics, and patient care.
+          </p>
+        </div>
+        <Image
+          src="/me14.webp"
+          width={500}
+          height={500}
+          alt="linear demo image"
+          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+        />
+      </WobbleCard>
+    </div>
+  );
+}
