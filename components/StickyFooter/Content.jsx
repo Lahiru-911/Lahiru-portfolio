@@ -130,16 +130,6 @@
 
 // export default Footer;
 
-
-
-
-
-
-
-
-
-
-
 "use client";
 import Link from "next/link";
 import React from "react";
@@ -148,53 +138,53 @@ import { FaArrowUp } from "react-icons/fa";
 
 const Content = () => {
   return (
-    <footer className="bg-black text-white py-6 rounded-t-[40px] h-full w-full">
-      <div className="px-6 md:px-16 lg:px-20">
-<div className="max-w-full mx-auto text-left">
-  {/* === Header Section === */}
-  <div className="hidden md:block">
-    <h2 className="text-xs sm:text-sm md:text-base font-semibold tracking-widest mb-1">
-      INTERESTED IN LEARNING MORE?
-    </h2>
-    <Link
-      href="/contact"
-      className="flex items-center justify-start space-x-1 mb-5 hover:text-blue-500"
-    >
-      <h1 className="font-radley text-3xl md:text-5xl font-bold">
-        Connect with me
-      </h1>
-      <RiArrowRightUpLine className="text-2xl md:text-5xl" />
-    </Link>
-  </div>
-
-  {/* === Links Section === */}
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 md:pt-4 ">
-    {/* Navigation Links */}
-    <div>
-      <h3 className="font-bold mb-3 border-b border-gray-50">
-        NAVIGATION
-      </h3>
-      <ul className="space-y-1 md:space-y-4 font-light md:text-lg">
-        {[
-          { name: "About Me", link: "/" },
-          { name: "Projects", link: "/projects" },
-          { name: "Contact", link: "/contact" },
-          { name: "Skills", link: "/allthree" },
-          { name: "Experience", link: "/allthree" },
-          { name: "Education", link: "/allthree" },
-          { name: "Blog", link: "/blog" },
-        ].map((item) => (
-          <li key={item.name} className="cursor-pointer">
+    <footer className="bg-black text-white py-4 rounded-t-3xl h-full w-full">
+      <div className="px-6 md:px-10">
+        <div className="max-w-full mx-auto text-left">
+          {/* === Header Section === */}
+          <div className="hidden md:block">
+            <h2 className="text-xs sm:text-sm md:text-base font-semibold tracking-widest mb-1">
+              INTERESTED IN LEARNING MORE?
+            </h2>
             <Link
-              href={item.link}
-              className="text-white hover:text-gray-300"
+              href="/contact"
+              className="flex items-center justify-start space-x-1 mb-1 hover:text-blue-500"
             >
-              {item.name}
+              <h1 className="font-radley text-3xl md:text-5xl font-bold">
+                Connect with me
+              </h1>
+              <RiArrowRightUpLine className="text-2xl md:text-5xl" />
             </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+          </div>
+
+          {/* === Links Section === */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2 md:pt-4 ">
+            {/* Navigation Links */}
+            <div>
+              <h3 className="font-bold mb-3 border-b border-gray-50">
+                NAVIGATION
+              </h3>
+              <ul className="space-y-1 md:space-y-4 font-light md:text-lg">
+                {[
+                  { name: "About Me", link: "/" },
+                  { name: "Projects", link: "/projects" },
+                  { name: "Contact", link: "/contact" },
+                  { name: "Skills", link: "/allthree" },
+                  { name: "Experience", link: "/allthree" },
+                  { name: "Education", link: "/allthree" },
+                  { name: "Blog", link: "/blog" },
+                ].map((item) => (
+                  <li key={item.name} className="cursor-pointer">
+                    <Link
+                      href={item.link}
+                      className="text-white hover:text-gray-300"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             {/* Social Links */}
             <div>
