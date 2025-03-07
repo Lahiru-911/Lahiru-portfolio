@@ -7,7 +7,7 @@ const AllThree = () => {
     <div className="bg-black">
       <Skill />
       <TimelineExp />
-      <div className="h-screen bg-black"></div>
+      {/* <div className="h-screen bg-black"></div> */}
     </div>
   );
 };

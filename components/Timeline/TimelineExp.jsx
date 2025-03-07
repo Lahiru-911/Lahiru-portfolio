@@ -77,7 +77,7 @@ export function TimelineExp() {
     {
       title: "2006 Dec - 2019 Aug",
       content: (
-        <div className="mb-28">
+        <div className="mb-40">
           <h1 className="text-white text-lg md:text-3xl font-semibold mb-0 md:mb-1">
             School Student
           </h1>
