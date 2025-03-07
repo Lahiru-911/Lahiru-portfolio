@@ -152,4 +152,21 @@ const Content = () => {
 
 export default Content;
 
+"use client";
+import Link from "next/link";
+import React from "react";
+import { RiArrowRightUpLine } from "react-icons/ri";
+import { FaArrowUp } from "react-icons/fa";
 
+const Content = () => {
+  return (
+    <div>
+<footer>
+  
+</footer>
+
+    </div>
+  )
+}
+
+export default Content
