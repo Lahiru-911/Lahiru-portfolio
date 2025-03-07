@@ -284,34 +284,3 @@ const Content = () => {
 
 export default Content;
 
-// "use client";
-// import Link from "next/link";
-// import React from "react";
-// import { RiArrowRightUpLine } from "react-icons/ri";
-// import { FaArrowUp } from "react-icons/fa";
-
-// const Content = () => {
-//   return (
-//     <>
-//       <footer className="bg-black text-white py-6 rounded-t-3xl h-full w-full">
-//         {/* === Header Section === */}
-//         <div className="">
-//           <h2 className="text-xs sm:text-sm md:text-base font-semibold tracking-widest mb-1">
-//             INTERESTED IN LEARNING MORE?
-//           </h2>
-//           <Link
-//             href="/contact"
-//             className="flex items-center justify-start space-x-1 mb-5 hover:text-blue-500"
-//           >
-//             <h1 className="font-radley text-3xl md:text-5xl font-bold">
-//               Connect with me
-//             </h1>
-//             <RiArrowRightUpLine className="text-2xl md:text-5xl" />
-//           </Link>
-//         </div>
-//       </footer>
-//     </>
-//   );
-// };
-
-// export default Content;
