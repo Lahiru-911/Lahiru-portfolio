@@ -132,13 +132,17 @@ const Contact = () => {
             {/* Left Section */}
             <div className="space-y-4">
               <h1 className="text-white text-2xl font-light sm:text-3xl md:text-4xl lg:text-5xl mb-4">
-                Hey! Tell us all the <br />
-                <span className="text-[#0081FB]">things</span>
+                Hey! Let’s Build Something <br />
+                <span className="text-[#0081FB]">Amazing!</span>
               </h1>
-              <p className="text-white mb-4 text-xs font-normal sm:text-sm lg:text-base">
-                Give us a few details and we’ll offer the best solution.
+              <p className="text-white mb-4 text-xs font-normal sm:text-sm lg:text-base italic">
+                Drop a message with a few details, and I'll get back with the
+                best solution for you.
               </p>
-              <form className="space-y-4 text-sm md:text-base" onSubmit={handleSubmit}>
+              <form
+                className="space-y-4 text-sm md:text-base"
+                onSubmit={handleSubmit}
+              >
                 <InputField
                   placeholder="Name"
                   type="text"
@@ -177,7 +181,7 @@ const Contact = () => {
                   value="e86b5632-b553-48e3-9b74-f8cbe7ab19fe"
                 />
                 <button type="submit" className="group relative w-full">
-                  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 opacity-75 blur transition duration-300 group-hover:opacity-100"></div>
+                  <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-blue-400 to-blue-600 opacity-75 blur transition duration-300 group-hover:opacity-100"></div>
                   <span className="relative flex justify-center items-center rounded-2xl bg-black px-10 py-3 leading-none">
                     <span className="text-sm md:text-base font-medium text-white uppercase">
                       Submit
@@ -202,7 +206,7 @@ const Contact = () => {
       </div>
 
       <div className="mt-5">
-        <WavyBackground/>
+        <WavyBackground />
       </div>
     </div>
   );
