@@ -63,10 +63,4 @@ const HeroSection = () => {
 
 export default HeroSection;
 
-//       {/* Words Marquee */}
-//       <div className="absolute z-20 bottom-5">
-//         <WordsMarquee />
-//       </div>
-//     </div>
-//   );
-// }
+
