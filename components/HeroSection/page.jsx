@@ -12,7 +12,7 @@ const HeroSection = () => {
     <>
       <div className="relative w-full min-h-screen md:rounded-b-3xl shadow-2xl ring-1 ring-gray-900/10 bg-[#999D9E] flex justify-start md:items-center items-end">
         {/* === Copyright Section === */}
-        <div className="absolute top-4 md:top-5 md:left-10 left-3 dm-sans-regular z-10 text-white">
+        <div className="absolute top-4 md:top-5 md:left-10 left-3 dm-sans-regular z-10 text-black">
           © Code by Wara.
         </div>
 
