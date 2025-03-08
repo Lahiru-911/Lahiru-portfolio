@@ -37,14 +37,14 @@ const Contact = () => {
 
     const { name, phone, email, message } = formData;
 
-    // Check if all fields are filled
+    
     if (!name || !phone || !email || !message) {
       alert("Please fill in all fields.");
       return;
     }
 
     try {
-      // Web3 form submission (replace with your API endpoint)
+      
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -55,13 +55,13 @@ const Contact = () => {
           phone,
           email,
           message,
-          access_key: "e86b5632-b553-48e3-9b74-f8cbe7ab19fe", // Replace with your actual Access Key
+          access_key: "e86b5632-b553-48e3-9b74-f8cbe7ab19fe", 
         }),
       });
 
       if (response.ok) {
         alert("Form submitted successfully!");
-        setFormData({ name: "", phone: "", email: "", message: "" }); // Clear form
+        setFormData({ name: "", phone: "", email: "", message: "" }); 
       } else {
         alert("Error submitting form.");
       }
@@ -209,6 +209,7 @@ const Contact = () => {
       <div className="mt-5">
         <WavyBackground />
       </div>
+      <div className="bg-[#121212] w-full h-16"/>
     </div>
   );
 };
