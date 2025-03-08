@@ -27,7 +27,7 @@ const HeroSection = () => {
             src="/me.webp"
             alt="Background"
             fill
-            className="absolute inset-0 object-cover md:rounded-b-3xl"
+            className="absolute inset-0 object-cover md:rounded-b-3xl pointer-events-none select-none"
             priority
             quality={100}
           />
