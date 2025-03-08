@@ -45,7 +45,7 @@ export function WavyBackground() {
             <br />
             <a
               className="text-white hover:text-[#0081FB]"
-              href="mailto:prabath@residuesolution.com"
+              href="mailto:lahiruxk@gmail.com"
             >
               lahiruxk@gmail.com
             </a>
