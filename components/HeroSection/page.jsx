@@ -54,9 +54,9 @@ const HeroSection = () => {
 
       
 
-        {/* <div className="absolute z-20 bottom-5 w-full h-[50px] overflow-hidden pointer-events-none">
+        <div className="absolute z-50 -bottom-10 w-full h-auto overflow-hidden pointer-events-none">
           <WordsMarquee />
-        </div> */}
+        </div>
       </div>
     </>
   );
