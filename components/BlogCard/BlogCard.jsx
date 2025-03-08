@@ -99,7 +99,7 @@ export function BlogCard() {
       title: "Gippity AI powers the entire universe",
       description:
         "With over 100,000 monthly active bot users, Gippity AI is the most popular AI platform for developers.",
-      imageSrc: "/me14.webp",
+      imageSrc: "/me1.webp",
       imageAlt: "linear demo image",
     },
     {
@@ -107,7 +107,7 @@ export function BlogCard() {
       title: "No shirt, no shoes, no weapons.",
       description:
         "If someone yells 'stop!', goes limp, or taps out, the fight is over.",
-      imageSrc: "/me14.webp",
+      imageSrc: "/me1.webp",
       imageAlt: "linear demo image",
     },
     {
@@ -115,7 +115,7 @@ export function BlogCard() {
       title: "Signup for blazing-fast AI!",
       description:
         "With over 100,000 monthly active bot users, Gippity AI is the most popular AI platform for developers.",
-      imageSrc: "/me14.webp",
+      imageSrc: "/me1.webp",
       imageAlt: "linear demo image",
     },
     {
@@ -123,7 +123,7 @@ export function BlogCard() {
       title: "Future of AI technology",
       description:
         "AI is revolutionizing the world, and its potential is limitless.",
-      imageSrc: "/me14.webp",
+      imageSrc: "/me1.webp",
       imageAlt: "linear demo image",
     },
     {
@@ -131,7 +131,7 @@ export function BlogCard() {
       title: "Revolutionizing healthcare with AI",
       description:
         "AI is transforming healthcare, improving diagnostics, and patient care.",
-      imageSrc: "/me14.webp",
+      imageSrc: "/me1.webp",
       imageAlt: "linear demo image",
     },
     {
@@ -139,7 +139,7 @@ export function BlogCard() {
       title: "The rise of quantum computing",
       description:
         "Quantum computing is redefining computing power and AI integration.",
-      imageSrc: "/me14.webp",
+      imageSrc: "/me1.webp",
       imageAlt: "linear demo image",
     },
     {
@@ -147,7 +147,7 @@ export function BlogCard() {
       title: "Blockchain and its implications for finance",
       description:
         "Blockchain is revolutionizing financial systems, making transactions more secure and transparent.",
-      imageSrc: "/me14.webp",
+      imageSrc: "/me1.webp",
       imageAlt: "linear demo image",
     },
     {
@@ -155,7 +155,7 @@ export function BlogCard() {
       title: "Exploring the future of autonomous vehicles",
       description:
         "Self-driving cars are the next big thing in transportation.",
-      imageSrc: "/me14.webp",
+      imageSrc: "/me1.webp",
       imageAlt: "linear demo image",
     },
     {
@@ -163,7 +163,7 @@ export function BlogCard() {
       title: "AI in space exploration",
       description:
         "AI is analyzing data from space missions to help us understand the cosmos.",
-      imageSrc: "/me14.webp",
+      imageSrc: "/me1.webp",
       imageAlt: "linear demo image",
     },
     {
@@ -171,7 +171,7 @@ export function BlogCard() {
       title: "Advancements in renewable energy",
       description:
         "New technologies are leading the charge in sustainable energy.",
-      imageSrc: "/me14.webp",
+      imageSrc: "/me1.webp",
       imageAlt: "linear demo image",
     },
     {
@@ -179,7 +179,7 @@ export function BlogCard() {
       title: "AI and ethics: a new frontier",
       description:
         "AI presents new ethical challenges that need to be addressed to ensure its responsible use.",
-      imageSrc: "/me14.webp", // Update this image
+      imageSrc: "/me1.webp", // Update this image
       imageAlt: "AI ethics image",
     },
     {
@@ -187,7 +187,7 @@ export function BlogCard() {
       title: "AI and ethics: a new frontier",
       description:
         "AI presents new ethical challenges that need to be addressed to ensure its responsible use.",
-      imageSrc: "/me14.webp", // Update this image
+      imageSrc: "/me1.webp", // Update this image
       imageAlt: "AI ethics image",
     },
     {
@@ -195,7 +195,7 @@ export function BlogCard() {
       title: "AI and ethics: a new frontier",
       description:
         "AI presents new ethical challenges that need to be addressed to ensure its responsible use.",
-      imageSrc: "/me14.webp", // Update this image
+      imageSrc: "/me1.webp", // Update this image
       imageAlt: "AI ethics image",
     },
     {
@@ -203,7 +203,7 @@ export function BlogCard() {
       title: "AI and ethics: a new frontier",
       description:
         "AI presents new ethical challenges that need to be addressed to ensure its responsible use.",
-      imageSrc: "/me14.webp", // Update this image
+      imageSrc: "/me1.webp", // Update this image
       imageAlt: "AI ethics image",
     },
     {
@@ -211,7 +211,7 @@ export function BlogCard() {
       title: "AI and ethics: a new frontier",
       description:
         "AI presents new ethical challenges that need to be addressed to ensure its responsible use.",
-      imageSrc: "/me14.webp", // Update this image
+      imageSrc: "/me1.webp", // Update this image
       imageAlt: "AI ethics image",
     },
     {
@@ -227,7 +227,7 @@ export function BlogCard() {
       title: "AI and ethics: a new frontier",
       description:
         "AI presents new ethical challenges that need to be addressed to ensure its responsible use.",
-      imageSrc: "/me14.webp", // Update this image
+      imageSrc: "/me1.webp", // Update this image
       imageAlt: "AI ethics image",
     },
     {
@@ -235,7 +235,7 @@ export function BlogCard() {
       title: "AI and ethics: a new frontier",
       description:
         "AI presents new ethical challenges that need to be addressed to ensure its responsible use.",
-      imageSrc: "/me14.webp", // Update this image
+      imageSrc: "/me1.webp", // Update this image
       imageAlt: "AI ethics image",
     },
     {
@@ -243,7 +243,7 @@ export function BlogCard() {
       title: "AI and ethics: a new frontier",
       description:
         "AI presents new ethical challenges that need to be addressed to ensure its responsible use.",
-      imageSrc: "/me14.webp", // Update this image
+      imageSrc: "/me1.webp", // Update this image
       imageAlt: "AI ethics image",
     },
     {
@@ -251,7 +251,7 @@ export function BlogCard() {
       title: "AI and ethics: a new frontier",
       description:
         "AI presents new ethical challenges that need to be addressed to ensure its responsible use.",
-      imageSrc: "/me14.webp", // Update this image
+      imageSrc: "/me1.webp", // Update this image
       imageAlt: "AI ethics image",
     },
     {
