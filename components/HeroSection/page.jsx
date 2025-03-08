@@ -52,9 +52,8 @@ const HeroSection = () => {
           </Link>
         </motion.div>
 
-      
-
-        <div className="absolute z-50 -bottom-10 w-full h-auto overflow-hidden pointer-events-none">
+        {/* WordsMarquee */}
+        <div className="absolute z-50 top-[66%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-auto md:bottom-[-3%] md:left-auto md:translate-x-0 md:translate-y-0 w-full h-auto overflow-hidden pointer-events-none">
           <WordsMarquee />
         </div>
       </div>
