@@ -40,7 +40,7 @@ const WordsMarquee = () => {
         loop={0}
         autoFill={true}
       >
-        <h1 className="text-white mx-1 sm:mx-2 md:mx-3 lg:mx-4 xl:mx-6 2xl:mx-8 dm-sans-regular text-5xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[11rem] 2xl:text-[13rem]">
+        <h1 className="text-white mx-1 sm:mx-2 md:mx-3 lg:mx-4 xl:mx-6 2xl:mx-8 dm-sans-regular text-5xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[11rem]">
           Lahiru Kavinda—
         </h1>
       </Marquee>
