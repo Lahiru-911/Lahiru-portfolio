@@ -29,7 +29,7 @@ export function WavyBackground() {
             Phone
             <br />
             <a
-              href="tel:(+94) 74 277 7201"
+              href="tel:(+94) 77 578 8667"
               className="text-white hover:text-[#0081FB]"
             >
               (+94) 77 578 8667
@@ -58,7 +58,7 @@ export function WavyBackground() {
           <address className="text-xs sm:text-sm md:text-base lg:text-lg">
             <a
               className="text-white hover:text-[#0081FB] not-italic"
-              href="#"
+              href="https://www.google.com/maps?q=Colombo,Sri+Lanka&hl=en"
               target="_blank"
               rel="noopener noreferrer"
             >
