@@ -10,7 +10,7 @@ export function Skill() {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-white mb-5">
-               <br />
+              <br />
               <span className="text-4xl md:text-[4rem] font-bold mt-1 leading-none">
                 Scroll Through My Expertise
               </span>
@@ -20,19 +20,22 @@ export function Skill() {
       >
         {/* First Img */}
         <Image
-          src="https://ui.aceternity.com/_next/image?url=%2Flinear.webp&w=1920&q=75"
+          src="/langxl.webp"
           alt="hero"
+          layout="responsive"
           height={720}
           width={1400}
-          className="mx-auto hidden md:block rounded-2xl object-cover h-full object-left-top"
+          className="mx-auto w-full object-cover h-full hidden md:block"
           draggable={false}
           quality={100}
           priority
         />
+
         {/* Second Img */}
         <Image
-          src="/me14.webp"
+          src="/langm.webp"
           alt="hero"
+          layout="responsive"
           height={720}
           width={1400}
           className="mx-auto rounded-2xl block md:hidden object-cover h-full object-left-top"
