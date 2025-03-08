@@ -1,6 +1,7 @@
 "use client";
 import { WavyBackground } from "@/components/WavyBackground/WavyBackground";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const InputField = ({ placeholder, type, icon, name, value, onChange }) => (
   <div className="flex items-center w-full h-[40px] text-white/60 bg-[#09090b] border border-white/10 rounded-lg focus-within:ring-2 focus-within:ring-gray-700 focus-within:ring-offset-2 focus-within:ring-offset-[#09090b] transition-all duration-150 ease-in-out">
@@ -191,15 +192,15 @@ const Contact = () => {
               </form>
             </div>
 
-            {/* Right Section (Map Box) */}
-            <div className="hidden sm:block">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15844.202952738427!2d79.858473!3d6.884526!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25b001c3e29e3%3A0xe6643f6b87d2e1ed!2sResidue%20Solution%20Pvt%20Ltd!5e0!3m2!1sen!2slk!4v1729247413914!5m2!1sen!2slk"
-                className="w-full h-full rounded-[20px]"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+            {/* Right Section (GIF Box) */}
+            <div className="hidden sm:block relative w-full h-full rounded-[20px] overflow-hidden">
+              <Image
+                src="/cs.gif"
+                alt="Animated Illustration"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-[20px]"
+              />
             </div>
           </div>
         </div>
@@ -213,3 +214,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
