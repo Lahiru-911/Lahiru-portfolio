@@ -1,9 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "../components/NavBar/index"
+import NavBar from "../components/NavBar/index";
 import Footer from "@/components/StickyFooter/Footer";
-
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Lahiru Thilakasiri | Portfolio",
-  description: "Showcasing my expertise in Software Engineering, Web Development, and Quality Assurance.",
+  title: "Lahiru Thilakasiri | Full-Stack Engineer & Web Developer",
+  description:
+    "Experienced Full-Stack Engineer & Web Developer specializing in modern web technologies, delivering high-performance applications.",
 };
 export default function RootLayout({ children }) {
   return (
@@ -25,10 +24,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-       
-       <NavBar/>
+        <NavBar />
         {children}
-       <Footer/>
+        <Footer />
       </body>
     </html>
   );

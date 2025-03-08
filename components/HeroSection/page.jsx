@@ -24,7 +24,7 @@ const HeroSection = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <Image
-            src="/me.webp"
+            src="/me1.webp"
             alt="Background"
             fill
             className="absolute inset-0 object-cover md:rounded-b-3xl pointer-events-none select-none"
@@ -42,7 +42,7 @@ const HeroSection = () => {
         >
           <FaTerminal className="text-2xl lg:text-4xl" />
           <h1 className="text-xl lg:text-2xl xl:text-4xl dm-sans-regular md:mb-5">
-            Software <br />
+            Full-Stack <br />
             Engineer & Web Developer
           </h1>
           <Link href="/contact">
@@ -62,5 +62,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-
