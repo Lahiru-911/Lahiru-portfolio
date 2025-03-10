@@ -126,8 +126,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#121212]">
-      <div className="flex justify-center p-5 md:p-10 pt-16 md:pt-20 bg-[#121212]">
+    <div className="bg-black">
+      <div className="flex justify-center p-5 md:p-10 pt-16 md:pt-20 bg-black">
         <div className="rounded-3xl w-full h-auto p-6 shadow-lg bg-black shadow-blue-400 outline outline-1 outline-blue-600">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {/* Left Section */}
@@ -209,7 +209,7 @@ const Contact = () => {
       <div className="mt-5">
         <WavyBackground />
       </div>
-      <div className="bg-[#121212] w-full h-16"/>
+      <div className="bg-black w-full h-16"/>
     </div>
   );
 };

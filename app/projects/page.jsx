@@ -23,7 +23,7 @@ const ProjectCard = dynamic(
 
 const Projects = () => {
   return (
-    <div className="bg-[#121212]">
+    <div className="bg-black">
       <Head>
         <title>My Projects</title>
         <meta
