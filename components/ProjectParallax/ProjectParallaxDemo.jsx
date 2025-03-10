@@ -9,7 +9,6 @@ import Link from "next/link";
 export const ProjectParallaxDemo = () => {
   const [projects, setProjects] = useState([]);
 
-  // Fetch projects from Firebase on mount
   useEffect(() => {
     async function fetchProjects() {
       try {
