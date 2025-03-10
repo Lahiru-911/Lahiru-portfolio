@@ -174,7 +174,7 @@ const Content = () => {
                 <li key={item.name} className="cursor-pointer">
                   <Link
                     href={item.link}
-                    className="text-white hover:text-gray-300"
+                    className="text-white hover:text-blue-500"
                   >
                     {item.name}
                   </Link>
@@ -188,11 +188,11 @@ const Content = () => {
             <h3 className="font-bold mb-3 border-b border-gray-50">SOCIALS</h3>
             <ul className="space-y-1 md:space-y-4 font-light ">
               {[
-                { name: "LinkedIn", link: "https://www.linkedin.com" },
+                { name: "LinkedIn", link: "http://www.linkedin.com/in/lahiru-thilakasiri-367541314" },
                 { name: "Facebook", link: "https://www.facebook.com" },
                 { name: "Instagram", link: "https://www.instagram.com" },
-                { name: "WhatsApp", link: "https://wa.me/" },
-                { name: "GitHub", link: "https://github.com" },
+                { name: "WhatsApp", link: "https://wa.me/94775788667" }
+                { name: "GitHub", link: "https://github.com/Lahiru-911" },
                 { name: "Behance", link: "https://www.behance.net" },
                 { name: "YouTube", link: "https://www.youtube.com" },
               ].map((item) => (
@@ -202,7 +202,7 @@ const Content = () => {
                 >
                   <a
                     href={item.link}
-                    className="text-white flex items-center gap-1 hover:text-blue-300"
+                    className="text-white flex items-center gap-1 hover:text-blue-500"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -225,11 +225,11 @@ const Content = () => {
               ].map((item) => (
                 <li
                   key={item.name}
-                  className="cursor-pointer hover:text-gray-400"
+                  className="cursor-pointer"
                 >
                   <a
                     href={item.link}
-                    className="text-white"
+                    className="text-white hover:text-blue-500"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
