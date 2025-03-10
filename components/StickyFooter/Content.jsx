@@ -188,10 +188,16 @@ const Content = () => {
             <h3 className="font-bold mb-3 border-b border-gray-50">SOCIALS</h3>
             <ul className="space-y-1 md:space-y-4 font-light ">
               {[
-                { name: "LinkedIn", link: "http://www.linkedin.com/in/lahiru-thilakasiri-367541314" },
+                {
+                  name: "LinkedIn",
+                  link: "http://www.linkedin.com/in/lahiru-thilakasiri-367541314",
+                },
                 { name: "Facebook", link: "https://www.facebook.com" },
                 { name: "Instagram", link: "https://www.instagram.com" },
-                { name: "WhatsApp", link: "https://wa.me/94775788667" }
+                {
+                  name: "WhatsApp",
+                  link: "https://wa.me/94775788667?text=Hello!%20I'm%20interested%20in%20your%20services.",
+                },
                 { name: "GitHub", link: "https://github.com/Lahiru-911" },
                 { name: "Behance", link: "https://www.behance.net" },
                 { name: "YouTube", link: "https://www.youtube.com" },
@@ -223,10 +229,7 @@ const Content = () => {
                 { name: "Phone", link: "tel:+94775788667" },
                 { name: "Location", link: "https://www.google.com/maps" },
               ].map((item) => (
-                <li
-                  key={item.name}
-                  className="cursor-pointer"
-                >
+                <li key={item.name} className="cursor-pointer">
                   <a
                     href={item.link}
                     className="text-white hover:text-blue-500"
