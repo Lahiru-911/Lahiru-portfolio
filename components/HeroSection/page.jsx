@@ -1,10 +1,13 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import MagnetButton from "../MagnetButton/page";
-import { FaTerminal } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { FaTerminal } from "react-icons/fa";
+
+// Components
+import MagnetButton from "../MagnetButton/page";
 import WordsMarquee from "../WordsMarquee/page";
 
 const HeroSection = () => {
@@ -16,7 +19,7 @@ const HeroSection = () => {
           © Code by Wara.
         </div>
 
-        {/* Background Image */}
+        {/* === Background Image === */}
         <motion.div
           className="absolute inset-0"
           initial={{ opacity: 0, x: 50 }}
@@ -27,24 +30,26 @@ const HeroSection = () => {
             src="/me.webp"
             alt="Background"
             fill
-            className="absolute inset-0 object-cover md:rounded-b-3xl pointer-events-none select-none"
             priority
             quality={100}
+            className="absolute inset-0 object-cover md:rounded-b-3xl pointer-events-none select-none"
           />
         </motion.div>
 
-        {/* Text Content */}
+        {/* === Text Content === */}
         <motion.div
-          className="absolute z-10 flex flex-col text-white mx-5 md:mx-8 lg:mx-12 my-3 gap-4 md:gap-6 xl:gap-8 "
+          className="absolute z-10 flex flex-col text-white mx-5 md:mx-8 lg:mx-12 my-3 gap-4 md:gap-6 xl:gap-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
           <FaTerminal className="text-2xl lg:text-4xl" />
+
           <h1 className="text-xl lg:text-2xl xl:text-4xl dm-sans-regular md:mb-5">
             Full-Stack <br />
             Engineer & Web Developer
           </h1>
+
           <Link href="/contact">
             <div>
               <MagnetButton />
@@ -52,7 +57,7 @@ const HeroSection = () => {
           </Link>
         </motion.div>
 
-        {/* WordsMarquee */}
+        {/* === WordsMarquee === */}
         <div className="absolute z-50 top-[66%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-auto md:bottom-[-3%] md:left-auto md:translate-x-0 md:translate-y-0 w-full h-auto overflow-hidden pointer-events-none">
           <WordsMarquee />
         </div>
