@@ -35,7 +35,7 @@ const ProjectCard = () => {
 
   return (
     <>
-      <h1 className="mx-6 md:mx-12 mt-20 mb-14 p-3 text-3xl font-semibold md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-l from-blue-500 to-purple-600 hover:from-purple-500 hover:to-blue-600 text-center md:text-left tracking-wider duration-500">
+      <h1 className="mx-6 md:mx-12 mt-20 mb-14 p-3 text-3xl font-semibold md:text-5xl lg:text-6xl text-white text-center md:text-left tracking-wider duration-500 font-hedvig">
         Featured Projects
       </h1>
 
