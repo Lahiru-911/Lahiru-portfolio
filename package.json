@@ -16,6 +16,7 @@
     "@mui/styled-engine-sc": "^6.4.3",
     "@tabler/icons-react": "^3.30.0",
     "clsx": "^2.1.1",
+    "firebase": "^11.4.0",
     "framer-motion": "^12.4.10",
     "install": "^0.13.0",
     "lenis": "^1.1.21",
