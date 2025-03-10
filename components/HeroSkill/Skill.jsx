@@ -18,7 +18,7 @@ export function Skill() {
           </>
         }
       >
-        {/* First Img */}
+        {/* Larger Img */}
         <Image
           src="/langxl.webp"
           alt="hero"
@@ -31,7 +31,7 @@ export function Skill() {
           priority
         />
 
-        {/* Second Img */}
+        {/* Mobile Img */}
         <Image
           src="/langm.webp"
           alt="hero"
