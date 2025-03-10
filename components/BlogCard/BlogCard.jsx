@@ -3,28 +3,28 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { WobbleCard } from "./wobble-card.tsx";
-import { db } from "../../utils/firebaseConfig.js"; // Firebase config file
-import { ref, get } from "../../utils/firebaseConfig.js"; // Import the necessary functions
+import { db } from "../../utils/firebaseConfig.js"; 
+import { ref, get } from "../../utils/firebaseConfig.js"; 
 
 export function BlogCard() {
   const [cards, setCards] = useState([]);
 
-  // Fetch data from Firebase Realtime Database
+
   useEffect(() => {
     async function fetchData() {
       try {
-        // Reference to the 'blogs' node in Firebase Realtime Database
-        const dbRef = ref(db, "blogs"); // Path to 'blogs'
-        const snapshot = await get(dbRef); // Get the data snapshot
+      
+        const dbRef = ref(db, "blogs"); 
+        const snapshot = await get(dbRef); 
 
         if (snapshot.exists()) {
-          const blogs = snapshot.val(); // Get the data as an object
-          // Map over the object to format it as an array
+          const blogs = snapshot.val();
+    
           const blogArray = Object.keys(blogs).map((key) => ({
-            id: key, // Use the key as the unique id
-            ...blogs[key], // Spread the blog data
+            id: key, 
+            ...blogs[key], 
           }));
-          setCards(blogArray); // Update state with the fetched data
+          setCards(blogArray); 
         } else {
           console.log("No data available");
         }
@@ -36,13 +36,13 @@ export function BlogCard() {
     fetchData();
   }, []);
 
-  // Define the repeating styles
+ 
   const cardStyles = [
-    "col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]", // First style
-    "col-span-1 min-h-[300px] bg-gray-700", // Second style
-    "col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[400px]", // Third style
-    "col-span-1 min-h-[300px] bg-green-800", // Fourth style
-    "col-span-1 lg:col-span-2 h-full bg-purple-700 min-h-[500px] lg:min-h-[300px]", // Fifth style
+    "col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]",
+    "col-span-1 min-h-[300px] bg-gray-700", 
+    "col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[400px]", 
+    "col-span-1 min-h-[300px] bg-green-800", 
+    "col-span-1 lg:col-span-2 h-full bg-purple-700 min-h-[500px] lg:min-h-[300px]", 
   ];
 
   return (
@@ -51,10 +51,10 @@ export function BlogCard() {
         <WobbleCard key={card.id} containerClassName={cardStyles[index % 5]}>
           <div className="max-w-xs">
             <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-              {card.title} {/* Displaying blog title */}
+              {card.title} 
             </h2>
             <p className="mt-4 text-left text-base/6 text-neutral-200">
-              {card.excerpt} {/* Displaying blog excerpt */}
+              {card.excerpt} 
             </p>
 
             <Link href={`/blog/${card.id}`}>
@@ -65,10 +65,10 @@ export function BlogCard() {
           </div>
           {(index % 5 === 0 || index % 5 === 2 || index % 5 === 4) && (
             <Image
-              src={card.thumbnail} // Displaying blog thumbnail
+              src={card.thumbnail}
               width={260}
               height={300}
-              alt={card.title} // Using blog title as alt text for image
+              alt={card.title} 
               className="absolute right-3 lg:right-[2%] bottom-3 object-contain rounded-2xl"
             />
           )}
