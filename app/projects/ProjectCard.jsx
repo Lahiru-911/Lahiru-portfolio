@@ -1,63 +1,41 @@
 "use client";
-import React from "react";
-import Image from "next/image";
 
-// Sample project data array
-const projects = [
-  {
-    title: "Tailwind Card",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula.",
-    technologies: ["React", "TailwindCSS", "Node.js"],
-    imageSrc: "/me11.webp", // Replace with the path to your image
-    demoLink: "#", // Replace with the live demo link
-  },
-  {
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper.",
-    technologies: ["Vue", "CSS", "Express"],
-    imageSrc: "/me11.webp", // Replace with the path to your image
-    demoLink: "#", // Replace with the live demo link
-  },
-  {
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper.",
-    technologies: ["Vue", "CSS", "Express"],
-    imageSrc: "/me11.webp", // Replace with the path to your image
-    demoLink: "#", // Replace with the live demo link
-  },
-  {
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper.",
-    technologies: ["Vue", "CSS", "Express"],
-    imageSrc: "/me11.webp", // Replace with the path to your image
-    demoLink: "#", // Replace with the live demo link
-  },
-  {
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper.",
-    technologies: ["Vue", "CSS", "Express"],
-    imageSrc: "/me11.webp", // Replace with the path to your image
-    demoLink: "#", // Replace with the live demo link
-  },
-  {
-    title: "Project Two",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ullamcorper.",
-    technologies: ["Vue", "CSS", "Express"],
-    imageSrc: "/me11.webp", // Replace with the path to your image
-    demoLink: "#", // Replace with the live demo link
-  },
-];
+import { useState, useEffect } from "react";
+import { db, ref, get } from "../../utils/firebaseConfig";
+import Image from "next/image";
+import Link from "next/link";
 
 const ProjectCard = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const dbRef = ref(db, "projects");
+        const snapshot = await get(dbRef);
+
+        if (snapshot.exists()) {
+          const projectsData = snapshot.val();
+
+          const projectArray = Object.keys(projectsData).map((key) => ({
+            id: key,
+            ...projectsData[key],
+          }));
+          setProjects(projectArray);
+        } else {
+          console.log("No data available");
+        }
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <>
-      <h1 className="mx-6 md:mx-12 mt-20 mb-14 p-3 text-3xl font-semibold  md:text-5xl lg:text-6xl text-white text-center md:text-left tracking-wider duration-500 font-hedvig">
+      <h1 className="mx-6 md:mx-12 mt-20 mb-14 p-3 text-3xl font-semibold md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-l from-blue-500 to-purple-600 hover:from-purple-500 hover:to-blue-600 text-center md:text-left tracking-wider duration-500">
         Featured Projects
       </h1>
 
@@ -66,14 +44,14 @@ const ProjectCard = () => {
         {/* Map over the projects array */}
         {projects.map((project, index) => (
           <div
-            key={index}
+            key={project.id}
             className="relative flex flex-col w-full h-full rounded-xl bg-gradient-to-r from-[#fdfbfb] to-[#ebedee] text-gray-700 shadow-md transition-all duration-300 ease-in-out hover:scale-105"
           >
             {/* Project Card Header Section */}
             <div className="relative mx-4 -mt-6 h-64 sm:h-72 md:h-80 lg:h-96 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
               <Image
-                src={project.imageSrc}
-                alt={`Project Image for ${project.title}`}
+                src={project.projectCoverImage}
+                alt={`Cover image for ${project.projectTitle}`}
                 layout="fill"
                 objectFit="cover"
                 className="rounded-xl"
@@ -84,43 +62,39 @@ const ProjectCard = () => {
             <div className="px-6 pt-6 flex-1">
               {/* Project Title */}
               <h5 className="mb-2 block font-sans text-xl md:text-3xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                {project.title}
+                {project.projectTitle}
               </h5>
 
               {/* Short Description */}
               <p className="block font-sans text-base md:text-lg font-normal leading-relaxed text-inherit antialiased">
-                {project.description}
+                {project.shortSummary}
               </p>
 
               {/* Technologies Used Section */}
               <div className="mt-4">
-                <span className="inline-block font-medium text-base md:text-lg  text-gray-900">
-                  Technologies:
+                <span className="inline-block font-semibold  md:text-lg text-gray-800 ">
+                  Tech Stack
                 </span>
-                <ul className="mt-2 flex flex-wrap gap-3">
-                  {project.technologies.map((tech, idx) => (
-                    <li
+                <div className="flex flex-wrap gap-3">
+                  {project.techStack?.map((tech, idx) => (
+                    <span
                       key={idx}
-                      className="text-sm md:text-base text-blue-600 font-medium"
+                      className="inline-block px-4 py-2 bg-blue-600 text-white text-sm rounded-full"
                     >
                       {tech}
-                    </li>
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
 
             {/* Read More Button Section */}
-            <div className="p-6 pt-0">
-              <a
-                href={project.demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="cursor-pointer flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600 px-3 py-2 rounded-full text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 dm-sans-regular mt-4 w-auto sm:px-4 sm:py-2 md:px-5 md:py-2">
+            <div className="p-6 pt-0 mt-auto">
+              <Link href={`/projects/${project.id}`}>
+                <button className="flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600 px-3 py-2 rounded-full text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 dm-sans-regular mt-4 w-auto sm:px-4 sm:py-2 md:px-5 md:py-2">
                   Explore More
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         ))}
