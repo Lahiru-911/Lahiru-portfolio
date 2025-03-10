@@ -1,3 +1,4 @@
+"use client"
 import { BlogCard } from "@/components/BlogCard/BlogCard";
 import React from "react";
 
