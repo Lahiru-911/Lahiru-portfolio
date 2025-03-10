@@ -1,16 +1,46 @@
 "use client";
-import React from "react";
+
+import { useState, useEffect, useRef } from "react";
+import { db, ref, get } from "../../utils/firebaseConfig";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-export const ProjectParallaxDemo = ({ products }) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
-  const ref = React.useRef(null);
+export const ProjectParallaxDemo = () => {
+  const [projects, setProjects] = useState([]);
+
+  // Fetch projects from Firebase on mount
+  useEffect(() => {
+    async function fetchProjects() {
+      try {
+        const dbRef = ref(db, "projectparallax");
+        const snapshot = await get(dbRef);
+
+        if (snapshot.exists()) {
+          const projectsData = snapshot.val();
+
+          const projectArray = Object.keys(projectsData).map((key) => ({
+            id: key,
+            ...projectsData[key],
+          }));
+
+          setProjects(projectArray);
+        } else {
+          console.log("No project data available.");
+        }
+      } catch (error) {
+        console.error("Error fetching project data:", error);
+      }
+    }
+
+    fetchProjects();
+  }, []);
+
+  // ✅ Call all hooks before any conditional logic!
+  const refContainer = useRef(null);
+
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: refContainer,
     offset: ["start start", "end start"],
   });
 
@@ -40,10 +70,20 @@ export const ProjectParallaxDemo = ({ products }) => {
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+
+  // ✅ Safe to conditionally render *after* hooks have run
+  if (projects.length === 0) {
+    return <div className="text-white text-center">Loading Projects...</div>;
+  }
+
+  const firstRow = projects.slice(0, 5);
+  const secondRow = projects.slice(5, 10);
+  const thirdRow = projects.slice(10, 15);
+
   return (
     <div
-      ref={ref}
-      className=" h-[300vh] md:h-[380vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      ref={refContainer}
+      className="h-[300vh] md:h-[380vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -53,32 +93,31 @@ export const ProjectParallaxDemo = ({ products }) => {
           translateY,
           opacity,
         }}
-        className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          {firstRow.map((product) => (
+          {firstRow.map((project) => (
             <ProductCard
-              product={product}
+              key={project.id}
+              product={project}
               translate={translateX}
-              key={product.title}
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row mb-20 space-x-20 ">
-          {secondRow.map((product) => (
+        <motion.div className="flex flex-row mb-20 space-x-20">
+          {secondRow.map((project) => (
             <ProductCard
-              product={product}
+              key={project.id}
+              product={project}
               translate={translateXReverse}
-              key={product.title}
             />
           ))}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
+          {thirdRow.map((project) => (
             <ProductCard
-              product={product}
+              key={project.id}
+              product={project}
               translate={translateX}
-              key={product.title}
             />
           ))}
         </motion.div>
@@ -111,18 +150,18 @@ export const ProductCard = ({ product, translate }) => {
       whileHover={{
         y: -20,
       }}
-      key={product.title}
+      key={product.id}
       className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
       <Link
         href={product.link}
         target="_blank"
-        className="block group-hover/product:shadow-2xl "
+        className="block group-hover/product:shadow-2xl"
       >
         <Image
           src={product.thumbnail}
-          height="600"
-          width="400"
+          height={600}
+          width={400}
           className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />
