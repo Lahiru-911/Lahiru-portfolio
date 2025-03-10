@@ -35,6 +35,7 @@ const Projects = () => {
 
       <ProjectParallax />
       <ProjectCard />
+     
       <div className="h-10" />
     </div>
   );
