@@ -61,7 +61,7 @@ export function TimelineExp() {
           <h3 className="text-gray-400 text-sm md:text-lg font-medium mb-2 md:mb-3 uppercase">
             SUMITHRA GARMENTS (PVT) LTD
           </h3>
-          <p className="text-white text-xs md:text-base font-light italic">
+          <p className="text-white text-xs md:text-base font-light italic text-justify">
             {" "}
             "Worked as a Junior Industrial Engineer at Sumithra Garments (PVT)
             Ltd, contributing to process optimization, efficiency improvements,
