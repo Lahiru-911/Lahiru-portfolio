@@ -2,12 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+
+// Components
 import Preloader from "@/components/preloader/Preloader";
 import HeroSection from "@/components/HeroSection/page";
-import Textparallax from "@/components/Textparallax/page";
 import SocialMediaIcons from "@/components/GlobeAnimation/SocialMediaIcons";
 import PerspectiveText from "@/components/PerspectiveText/PerspectiveText";
 import Accordion from "@/components/Accordion/Accordion";
+import Textparallax from "@/components/Textparallax/page";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,9 +29,7 @@ const Home = () => {
     })();
 
     return () => {
-      if (locomotiveScroll) {
-        locomotiveScroll.destroy();
-      }
+      if (locomotiveScroll) locomotiveScroll.destroy();
     };
   }, []);
 
@@ -40,8 +40,9 @@ const Home = () => {
         {isLoading && <Preloader />}
       </AnimatePresence>
 
+      {/* Main Content */}
       {!isLoading && (
-        <div className="">
+        <div>
           {/* Hero Section */}
           <HeroSection />
 
@@ -49,16 +50,19 @@ const Home = () => {
           <SocialMediaIcons />
 
           {/* About Me Section */}
-          <div className="grid md:grid-cols-2 ml-4">
+          <section className="grid md:grid-cols-2 ml-4">
+            {/* Perspective Text */}
             <div>
               <PerspectiveText />
             </div>
 
+            {/* About Details */}
             <div className="md:pt-10 m-4 md:m-6 lg:m-7 xl:m-8">
               <div className="my-1 md:my-0">
                 <h1 className="w-full md:w-11/12 lg:w-10/12 xl:w-9/12 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl dm-sans-bold font-semibold">
                   Who I Am
                 </h1>
+
                 <p className="text-justify my-1 md:my-3 lg:my-4 w-5/6 lg:w-10/12 xl:w-3/4 text-[#808080] text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl dm-sans-regular">
                   Aspiring IT professional with a strong foundation in software
                   development and technology. With experience as a
@@ -71,7 +75,7 @@ const Home = () => {
                   intuitive and visually appealing user experiences.
                   Detail-oriented and skilled in identifying and documenting
                   software issues, ensuring optimal performance and user
-                  satisfaction. <br/>A proactive collaborator who works closely
+                  satisfaction. <br />A proactive collaborator who works closely
                   with development teams to implement efficient, innovative
                   solutions while maintaining high-quality software standards.
                 </p>
@@ -101,15 +105,15 @@ const Home = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Text Parallax Section */}
           <Textparallax />
 
           {/* Accordion Section */}
-          <div className="mx-5 md:mx-20 lg:mx-24 mb-16 md:mb-24">
+          <section className="mx-5 md:mx-20 lg:mx-24 mb-16 md:mb-24">
             <Accordion />
-          </div>
+          </section>
         </div>
       )}
     </div>
@@ -117,4 +121,3 @@ const Home = () => {
 };
 
 export default Home;
-
