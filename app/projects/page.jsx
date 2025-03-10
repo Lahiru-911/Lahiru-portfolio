@@ -2,6 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import { useEffect } from "react";
 
 const ProjectParallax = dynamic(
   () =>
@@ -22,6 +23,7 @@ const ProjectCard = dynamic(
 );
 
 const Projects = () => {
+  useEffect(() => window.scrollTo({ top: 0, behavior: "smooth" }), []);
   return (
     <div className="bg-black">
       <Head>
