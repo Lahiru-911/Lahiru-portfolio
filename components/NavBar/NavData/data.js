@@ -24,18 +24,18 @@ export const links = [
 export const footerLinks = [
   {
     title: "Facebook",
-    href: "https://www.facebook.com",
+    href: "https://www.facebook.com/share/15tGGsY41E/?mibextid=LQQJ4d",
   },
   {
     title: "LinkedIn",
-    href: "https://www.linkedin.com",
+    href: "http://www.linkedin.com/in/lahiru-thilakasiri-367541314",
   },
   {
     title: "Instagram",
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/wara19_?igsh=azBuNmV6czY3dng0&utm_source=qr",
   },
   {
     title: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/Lahiru-911",
   },
 ];
