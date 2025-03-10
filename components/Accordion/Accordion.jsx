@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const AccordionItem = ({
   index,
@@ -7,6 +8,12 @@ const AccordionItem = ({
   activeIndex,
   toggleAccordion,
 }) => {
+  const handleClick = (e) => {
+    // Prevent default anchor/button behavior (e.g., navigating to #)
+    e.preventDefault();
+    toggleAccordion(index);
+  };
+
   return (
     <div className="font-poppins">
       <h2 id={`accordion-flush-heading-${index}`}>
@@ -17,8 +24,9 @@ const AccordionItem = ({
           aria-expanded={activeIndex === index ? "true" : "false"}
           aria-controls={`accordion-flush-body-${index}`}
         >
-          {/* Adjusted font size with responsive behavior */}
-          <span className="text-lg sm:text-xl md:text-2xl font-medium">{title}</span>
+          <span className="text-lg sm:text-xl md:text-2xl font-medium">
+            {title}
+          </span>
           <svg
             className={`w-3 h-3 transform ${
               activeIndex === index ? "rotate-180" : ""
@@ -38,23 +46,37 @@ const AccordionItem = ({
           </svg>
         </button>
       </h2>
-      <div
-        id={`accordion-flush-body-${index}`}
-        className={`${
-          activeIndex === index ? "block" : "hidden"
-        } overflow-hidden transition-all duration-500 ease-in-out max-h-0 py-0 border-b border-gray-200`}
-        style={{
-          maxHeight: activeIndex === index ? "1000px" : "0px",
-          paddingTop: activeIndex === index ? "20px" : "0px",
-          paddingBottom: activeIndex === index ? "20px" : "0px",
-        }}
-        aria-labelledby={`accordion-flush-heading-${index}`}
-      >
-        {/* Adjusted font size with responsive behavior */}
-        <p className="text-gray-500 italic text-base sm:text-lg md:text-xl">
-          {content}
-        </p>
-      </div>
+
+      {/* Accordion Body with Framer Motion */}
+      <AnimatePresence>
+        {activeIndex === index && (
+          <motion.div
+            id={`accordion-flush-body-${index}`}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{
+              opacity: 1,
+              height: "auto", // Makes it smooth and adjusts based on content height
+            }}
+            exit={{
+              opacity: 0,
+              height: 0,
+            }}
+            transition={{
+              duration: 0.6,
+              ease: "easeInOut",
+              type: "spring", // Using spring physics for smoother effect
+              stiffness: 100,
+              damping: 25,
+            }}
+            aria-labelledby={`accordion-flush-heading-${index}`}
+            className="overflow-hidden border-b border-gray-200"
+          >
+            <p className="text-gray-500 italic text-base sm:text-lg md:text-xl">
+              {content}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
