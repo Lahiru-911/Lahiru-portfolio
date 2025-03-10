@@ -233,7 +233,7 @@ const Content = () => {
               {[
                 { name: "Email", link: "mailto:lahiruxk@gmail.com" },
                 { name: "Phone", link: "tel:+94775788667" },
-                { name: "Location", link: "https://www.google.com/maps" },
+                { name: "Location", link: "https://www.google.com/maps?q=Colombo,Sri+Lanka&hl=en" },
               ].map((item) => (
                 <li key={item.name} className="cursor-pointer">
                   <a
