@@ -23,10 +23,26 @@ export default function SocialMediaIcons() {
         className="flex flex-col items-center gap-3"
       >
         {[
-          { icon: <FaFacebookF />, color: "bg-blue-600", link: "#" },
-          { icon: <FaWhatsapp />, color: "bg-green-500", link: "#" },
-          { icon: <FaInstagram />, color: "bg-pink-500", link: "#" },
-          { icon: <FaLinkedinIn />, color: "bg-blue-700", link: "#" },
+          {
+            icon: <FaFacebookF />,
+            color: "bg-blue-600",
+            link: "https://www.facebook.com/share/15tGGsY41E/?mibextid=LQQJ4d",
+          },
+          {
+            icon: <FaWhatsapp />,
+            color: "bg-green-500",
+            link: "https://wa.me/94775788667",
+          },
+          {
+            icon: <FaInstagram />,
+            color: "bg-pink-500",
+            link: "https://www.instagram.com/wara19_?igsh=azBuNmV6czY3dng0&utm_source=qr",
+          },
+          {
+            icon: <FaLinkedinIn />,
+            color: "bg-blue-700",
+            link: "http://www.linkedin.com/in/lahiru-thilakasiri-367541314",
+          },
         ].map((item, index) => (
           <motion.a
             key={index}
