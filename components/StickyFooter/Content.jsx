@@ -192,8 +192,14 @@ const Content = () => {
                   name: "LinkedIn",
                   link: "http://www.linkedin.com/in/lahiru-thilakasiri-367541314",
                 },
-                { name: "Facebook", link: "https://www.facebook.com" },
-                { name: "Instagram", link: "https://www.instagram.com" },
+                {
+                  name: "Facebook",
+                  link: "https://www.facebook.com/share/15tGGsY41E/?mibextid=LQQJ4d",
+                },
+                {
+                  name: "Instagram",
+                  link: "https://www.instagram.com/wara19_?igsh=azBuNmV6czY3dng0&utm_source=qr",
+                },
                 {
                   name: "WhatsApp",
                   link: "https://wa.me/94775788667?text=Hello!%20I'm%20interested%20in%20your%20services.",
