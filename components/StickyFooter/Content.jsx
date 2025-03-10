@@ -163,7 +163,7 @@ const Content = () => {
             <h3 className="font-bold mb-3 border-b border-gray-50">
               NAVIGATION
             </h3>
-            <ul className="space-y-1 md:space-y-4 font-light ">
+            <ul className="space-y-1 md:space-y-4 font-normal ">
               {[
                 { name: "About Me", link: "/" },
                 { name: "Projects", link: "/projects" },
@@ -186,7 +186,7 @@ const Content = () => {
           {/* Social Links */}
           <div>
             <h3 className="font-bold mb-3 border-b border-gray-50">SOCIALS</h3>
-            <ul className="space-y-1 md:space-y-4 font-light ">
+            <ul className="space-y-1 md:space-y-4 font-normal ">
               {[
                 {
                   name: "LinkedIn",
@@ -228,7 +228,7 @@ const Content = () => {
           {/* Contact Links */}
           <div>
             <h3 className="font-bold mb-3 border-b border-gray-50">CONTACT</h3>
-            <ul className="space-y-1 md:space-y-4 font-light ">
+            <ul className="space-y-1 md:space-y-4 font-normal ">
               {[
                 { name: "Email", link: "mailto:lahiruxk@gmail.com" },
                 { name: "Phone", link: "tel:+94775788667" },
