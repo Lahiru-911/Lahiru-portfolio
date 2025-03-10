@@ -24,7 +24,7 @@ const HeroSection = () => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <Image
-            src="/me1.webp"
+            src="/me.webp"
             alt="Background"
             fill
             className="absolute inset-0 object-cover md:rounded-b-3xl pointer-events-none select-none"
