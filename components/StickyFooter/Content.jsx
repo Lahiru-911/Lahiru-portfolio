@@ -206,7 +206,6 @@ const Content = () => {
                 },
                 { name: "GitHub", link: "https://github.com/Lahiru-911" },
                 { name: "Behance", link: "https://www.behance.net" },
-                { name: "YouTube", link: "https://www.youtube.com" },
               ].map((item) => (
                 <li
                   key={item.name}
