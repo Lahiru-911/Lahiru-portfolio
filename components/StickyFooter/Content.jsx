@@ -205,7 +205,7 @@ const Content = () => {
                   link: "https://wa.me/94775788667?text=Hello!%20I'm%20interested%20in%20your%20services.",
                 },
                 { name: "GitHub", link: "https://github.com/Lahiru-911" },
-                { name: "Behance", link: "https://www.behance.net" },
+                { name: "Behance", link: "https://www.behance.net/lahirukavinda5" },
               ].map((item) => (
                 <li
                   key={item.name}
