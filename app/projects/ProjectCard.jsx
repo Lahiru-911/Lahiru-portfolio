@@ -63,25 +63,25 @@ const ProjectCard = () => {
             {/* Project Description Section */}
             <div className="px-6 pt-6 flex-1">
               {/* Project Title */}
-              <h5 className="mb-2 block font-sans text-xl md:text-3xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased">
+              <h5 className="mb-2 block font-sans text-lg md:text-2xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased">
                 {project.projectTitle}
               </h5>
 
               {/* Short Description */}
-              <p className="block font-sans text-base md:text-lg font-normal leading-relaxed text-inherit antialiased">
+              <p className="block font-sans text-sm md:text-sm font-normal leading-relaxed text-inherit antialiased">
                 {project.shortSummary}
               </p>
 
               {/* Technologies Used Section */}
               <div className="mt-4">
-                <span className="inline-block font-semibold  md:text-lg text-gray-50 ">
+                <span className="inline-block font-semibold md:text-lg text-gray-50 mb-1">
                   Tech Stack
                 </span>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2">
                   {project.techStack?.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="inline-block px-4 py-2 bg-blue-600 text-white text-sm rounded-full"
+                      className="inline-block px-4 py-2 bg-blue-600 text-white text-xs rounded-full"
                     >
                       {tech}
                     </span>
@@ -93,7 +93,7 @@ const ProjectCard = () => {
             {/* Explore More Button Section */}
             <div className="p-6 pt-0 mt-auto">
               <Link href={`/projects/${project.id}`}>
-                <button className="flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600 px-3 py-2 rounded-xl text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 dm-sans-regular mt-4 sm:px-4 sm:py-2 md:px-5 md:py-2 w-full">
+                <button className="flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600 px-3 py-2 rounded-xl text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 dm-sans-regular mt-4 sm:px-4 sm:py-2 md:px-5 md:py-2 w-full text-sm">
                   Explore More
                 </button>
               </Link>
