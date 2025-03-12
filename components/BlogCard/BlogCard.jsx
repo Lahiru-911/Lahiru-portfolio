@@ -58,7 +58,7 @@ export function BlogCard() {
             </p>
 
             <Link href={`/blog/${card.id}`}>
-              <button className="absolute cursor-pointer flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600  rounded-full text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 dm-sans-regular mt-4 w-auto px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-2">
+              <button className="absolute cursor-pointer flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600  rounded-full text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 dm-sans-regular mt-4 w-auto px-4 py-1 sm:px-4 sm:py-2 md:px-4 md:py-2">
                 Read More
               </button>
             </Link>
