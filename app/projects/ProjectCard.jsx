@@ -45,15 +45,17 @@ const ProjectCard = () => {
         {projects.map((project, index) => (
           <div
             key={project.id}
-            className="relative flex flex-col w-full h-full rounded-xl bg-gradient-to-r from-[#fdfbfb] to-[#ebedee] text-gray-700 shadow-md transition-all duration-300 ease-in-out hover:scale-105"
+            className="relative flex flex-col w-full h-full rounded-xl bg-[#121128] shadow-purple-400 outline outline-1 outline-purple-600 text-gray-100 shadow-md transition-all duration-300 ease-in-out hover:scale-105"
           >
             {/* Project Card Header Section */}
-            <div className="relative mx-4 -mt-6 h-64 sm:h-72 md:h-80 lg:h-96 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+            <div className="relative mx-4 -mt-6 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border shadow-purple-400 outline outline-1 outline-purple-600 text-white shadow-lg shadow-blue-gray-500/40">
               <Image
                 src={project.projectCoverImage}
                 alt={`Cover image for ${project.projectTitle}`}
-                layout="fill"
-                objectFit="cover"
+                layout="responsive"
+                width={800} // set your image width
+                height={450} // set your image height (aspect ratio)
+                objectFit="contain" // or "cover", depending on your goal
                 className="rounded-xl"
               />
             </div>
@@ -72,7 +74,7 @@ const ProjectCard = () => {
 
               {/* Technologies Used Section */}
               <div className="mt-4">
-                <span className="inline-block font-semibold  md:text-lg text-gray-800 ">
+                <span className="inline-block font-semibold  md:text-lg text-gray-50 ">
                   Tech Stack
                 </span>
                 <div className="flex flex-wrap gap-3">
