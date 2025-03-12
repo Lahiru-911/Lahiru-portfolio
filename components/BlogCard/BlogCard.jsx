@@ -49,16 +49,16 @@ export function BlogCard() {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
       {cards.map((card, index) => (
         <WobbleCard key={card.id} containerClassName={cardStyles[index % 5]}>
-          <div className="max-w-xs">
-            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
+          <div className="max-w-2xl">
+            <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold text-white ">
               {card.title} 
             </h2>
-            <p className="mt-4 text-left text-base/6 text-neutral-200">
+            <p className="mt-4 text-left text-sm md:text-base/6 text-neutral-200 lg:w-8/12">
               {card.excerpt} 
             </p>
 
             <Link href={`/blog/${card.id}`}>
-              <button className="absolute cursor-pointer flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600 px-3 py-2 rounded-full text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 dm-sans-regular mt-4 w-auto sm:px-4 sm:py-2 md:px-5 md:py-2">
+              <button className="absolute cursor-pointer flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600  rounded-full text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 dm-sans-regular mt-4 w-auto px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-2">
                 Read More
               </button>
             </Link>
@@ -69,7 +69,7 @@ export function BlogCard() {
               width={260}
               height={300}
               alt={card.title} 
-              className="absolute right-3 lg:right-[2%] bottom-3 object-contain rounded-2xl"
+              className="absolute right-3 lg:right-[2%] bottom-3 object-contain rounded-2xl w-[260px] md:w-[400px] lg:w-[260px] h-auto"
             />
           )}
         </WobbleCard>
