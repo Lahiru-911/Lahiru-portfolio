@@ -40,7 +40,7 @@ const ProjectCard = () => {
       </h1>
 
       {/* Project Card Container */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-24 md:gap-20 m-6 md:m-12">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-24 md:gap-20 m-6 md:m-12">
         {/* Map over the projects array */}
         {projects.map((project, index) => (
           <div
@@ -90,10 +90,10 @@ const ProjectCard = () => {
               </div>
             </div>
 
-            {/* Read More Button Section */}
+            {/* Explore More Button Section */}
             <div className="p-6 pt-0 mt-auto">
               <Link href={`/projects/${project.id}`}>
-                <button className="flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600 px-3 py-2 rounded-full text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 dm-sans-regular mt-4 w-auto sm:px-4 sm:py-2 md:px-5 md:py-2">
+                <button className="flex items-center justify-center bg-gradient-to-l from-blue-500 to-purple-600 px-3 py-2 rounded-xl text-white tracking-wide shadow-lg hover:from-purple-500 hover:to-blue-600 hover:scale-105 duration-300 hover:ring-1 dm-sans-regular mt-4 sm:px-4 sm:py-2 md:px-5 md:py-2 w-full">
                   Explore More
                 </button>
               </Link>
