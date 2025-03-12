@@ -51,7 +51,7 @@ const SingleProject = () => {
 
   return (
     <>
-      <div className="bg-[#E0E0E0] max-w-7xl mx-auto my-12 px-6 sm:px-8 lg:px-10 py-10 shadow-lg rounded-3xl border border-gray-100">
+      <div className="bg-[#E0E0E0] max-w-7xl md:mx-auto m-3 md:my-12 px-6 sm:px-8 lg:px-10 py-8 shadow-lg rounded-3xl border border-gray-100">
         <h1 className="text-left text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6 tracking-tight">
           {project.projectTitle}
         </h1>
