@@ -122,7 +122,7 @@ const SingleProject = () => {
           <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-5">
             Features
           </h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 text-base md:text-lg">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 text-base lg:text-lg">
             {project.projectFeatures.map((feature, idx) => (
               <li key={idx} className="leading-relaxed">
                 {feature}
@@ -139,7 +139,7 @@ const SingleProject = () => {
                 href={project.deployLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 md:px-5 py-2 md:py-3 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-2xl shadow-lg transition duration-300"
+                className="px-5 md:px-5 py-2 lg:py-3 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-2xl shadow-lg transition duration-300"
               >
                 Visit Live Project
               </a>
@@ -150,7 +150,7 @@ const SingleProject = () => {
                   href={project.repositoryLinks.frontend}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 md:px-8 py-2 md:py-4 text-center text-white bg-gray-800 hover:bg-gray-900 rounded-full shadow-lg transition duration-300"
+                  className="px-4 md:px-6 py-2 lg:py-3 text-center text-white bg-gray-800 hover:bg-gray-900 rounded-full shadow-lg transition duration-300"
                 >
                   Frontend Code
                 </a>
@@ -161,7 +161,7 @@ const SingleProject = () => {
                   href={project.repositoryLinks.backend}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 md:px-8 py-2 md:py-4 text-center text-white bg-gray-800 hover:bg-gray-900 rounded-full shadow-lg transition duration-300"
+                  className="px-4 md:px-6 py-2 lg:py-3 text-center text-white bg-gray-800 hover:bg-gray-900 rounded-full shadow-lg transition duration-300"
                 >
                   Backend Code
                 </a>
@@ -171,7 +171,7 @@ const SingleProject = () => {
 
           {/* Go Back Button */}
           <Link href="/projects">
-            <button className="px-6 md:px-4 py-2 md:py-3 border border-red-500 text-gray-800 hover:text-white hover:bg-red-500 rounded-full shadow-md transition duration-300">
+            <button className="px-6 md:px-4 py-2 border border-red-500 text-gray-800 hover:text-white hover:bg-red-500 rounded-full shadow-md transition duration-300">
               Go Back
             </button>
           </Link>
