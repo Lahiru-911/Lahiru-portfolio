@@ -68,8 +68,8 @@ const SingleProject = () => {
         </div>
 
         {/* Project Overview */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-gray-900 mb-5">
+        <section className="mb-14">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-3">
             Project Overview
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -78,7 +78,7 @@ const SingleProject = () => {
         </section>
 
         {/* Technologies Used */}
-        <section className="mb-16">
+        <section className="mb-14">
           <h2 className="text-3xl font-semibold text-gray-900 mb-5">
             Technologies Used
           </h2>
@@ -132,14 +132,14 @@ const SingleProject = () => {
         </section>
 
         {/* Links */}
-        <div className="flex flex-col sm:flex-row justify-between gap-8 mt-14">
+        <div className="flex flex-col sm:flex-row justify-between md:items-end gap-8 mt-14">
           <div className="flex flex-col gap-6 w-full sm:w-auto">
             {project.deployLink && (
               <a
                 href={project.deployLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-lg transition duration-300"
+                className="px-8 py-4 text-center text-white bg-indigo-600 hover:bg-indigo-700 rounded-2xl shadow-lg transition duration-300"
               >
                 Visit Live Project
               </a>
@@ -150,7 +150,7 @@ const SingleProject = () => {
                   href={project.repositoryLinks.frontend}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-4 text-center text-white bg-gray-800 hover:bg-gray-900 rounded-lg shadow-lg transition duration-300"
+                  className="px-8 py-4 text-center text-white bg-gray-800 hover:bg-gray-900 rounded-full shadow-lg transition duration-300"
                 >
                   Frontend Code
                 </a>
@@ -161,7 +161,7 @@ const SingleProject = () => {
                   href={project.repositoryLinks.backend}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-4 text-center text-white bg-gray-800 hover:bg-gray-900 rounded-lg shadow-lg transition duration-300"
+                  className="px-8 py-4 text-center text-white bg-gray-800 hover:bg-gray-900 rounded-full shadow-lg transition duration-300"
                 >
                   Backend Code
                 </a>
@@ -171,7 +171,7 @@ const SingleProject = () => {
 
           {/* Go Back Button */}
           <Link href="/projects">
-            <button className="px-8 py-4 border border-gray-300 text-gray-700 hover:bg-gray-100 rounded-lg shadow-md transition duration-300">
+            <button className="px-6 py-3 border border-red-500 text-gray-800 hover:text-white hover:bg-red-500 rounded-full shadow-md transition duration-300">
               Go Back
             </button>
           </Link>
