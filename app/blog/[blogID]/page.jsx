@@ -36,9 +36,9 @@ export default function BlogDetail() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto my-8 p-6 bg-[#eff5ff]  shadow-xl rounded-xl space-y-6">
+    <div className="max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto my-8  p-5 bg-[#eff5ff]  shadow-xl rounded-xl space-y-6">
       {/* Blog Title */}
-      <h1 className="text-4xl font-extrabold text-gray-900">{blog.title}</h1>
+      <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900">{blog.title}</h1>
       
       {/* Blog Image */}
       <Image
@@ -50,18 +50,18 @@ export default function BlogDetail() {
       />
 
       {/* Blog Content */}
-      <div className="text-lg text-gray-700 text-justify px-5">
+      <div className="text-sm lg:text-lg text-gray-700 text-justify md:px-5">
         <p className="mt-6">{blog.content}</p>
       </div>
 
       {/* Published Date */}
-      <p className="mt-4 text-base text-gray-700 italic px-5">Published on {blog.date}</p>
+      <p className="mt-4 text-base text-gray-700 italic md:px-5">Published on {blog.date}</p>
       
       {/* Back to Blog Button */}
-      <div className="mt-6 px-5">
+      <div className="mt-6 md:px-5">
         <a
           href="/blog"
-          className="inline-block px-6 py-3 bg-red-600 text-white hover:bg-red-700 rounded-2xl shadow-md transition duration-300 transform hover:scale-105"
+          className="inline-block  px-4 md:px-6 py-2 md:py-3 bg-red-600 text-white hover:bg-red-700 rounded-2xl shadow-md transition duration-300 transform hover:scale-105"
         >
           Back to Blogs
         </a>
