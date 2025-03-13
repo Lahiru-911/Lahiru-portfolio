@@ -36,7 +36,7 @@ export default function BlogDetail() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto my-8 p-6 bg-[#eff5ff]  shadow-xl rounded-xl space-y-6">
+    <div className="max-w-5xl mx-auto my-8 p-6 bg-[#eff5ff]  shadow-xl rounded-xl space-y-6">
       {/* Blog Title */}
       <h1 className="text-4xl font-extrabold text-gray-900">{blog.title}</h1>
       
@@ -46,19 +46,19 @@ export default function BlogDetail() {
         alt={blog.title}
         width={800}
         height={500}
-        className="w-full h-auto rounded-xl shadow-lg object-cover"
+        className="w-full h-auto rounded-xl shadow-lg object-cover "
       />
 
       {/* Blog Content */}
-      <div className="text-lg text-gray-700">
-        <p className="mt-4">{blog.content}</p>
+      <div className="text-lg text-gray-700 text-justify px-5">
+        <p className="mt-6">{blog.content}</p>
       </div>
 
       {/* Published Date */}
-      <p className="mt-4 text-base text-gray-700 italic">Published on {blog.date}</p>
+      <p className="mt-4 text-base text-gray-700 italic px-5">Published on {blog.date}</p>
       
       {/* Back to Blog Button */}
-      <div className="mt-6">
+      <div className="mt-6 px-5">
         <a
           href="/blog"
           className="inline-block px-6 py-3 bg-red-600 text-white hover:bg-red-700 rounded-2xl shadow-md transition duration-300 transform hover:scale-105"
