@@ -12,6 +12,10 @@ const SingleProject = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   // Fetch project data based on project ID
   useEffect(() => {
     if (projectID) {
@@ -72,7 +76,7 @@ const SingleProject = () => {
           <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
             Project Overview
           </h2>
-          <p className="text-base md:text-base text-justify text-gray-700 leading-relaxed">
+          <p className="text-base md:text-lg text-justify text-gray-700 leading-relaxed">
             {project.detailedProjectDescription}
           </p>
         </section>
