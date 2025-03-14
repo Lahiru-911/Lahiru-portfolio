@@ -1,5 +1,5 @@
 "use client";
-import { WavyBackground } from "@/components/WavyBackground/WavyBackground";
+import { WavyBackground } from "../../components/WavyBackground/WavyBackground";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
@@ -37,14 +37,12 @@ const Contact = () => {
 
     const { name, phone, email, message } = formData;
 
-    
     if (!name || !phone || !email || !message) {
       alert("Please fill in all fields.");
       return;
     }
 
     try {
-      
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -55,13 +53,13 @@ const Contact = () => {
           phone,
           email,
           message,
-          access_key: "e86b5632-b553-48e3-9b74-f8cbe7ab19fe", 
+          access_key: "e86b5632-b553-48e3-9b74-f8cbe7ab19fe",
         }),
       });
 
       if (response.ok) {
         alert("Form submitted successfully!");
-        setFormData({ name: "", phone: "", email: "", message: "" }); 
+        setFormData({ name: "", phone: "", email: "", message: "" });
       } else {
         alert("Error submitting form.");
       }
@@ -209,10 +207,9 @@ const Contact = () => {
       <div className="mt-5">
         <WavyBackground />
       </div>
-      <div className="bg-black w-full h-16"/>
+      <div className="bg-black w-full h-16" />
     </div>
   );
 };
 
 export default Contact;
-
