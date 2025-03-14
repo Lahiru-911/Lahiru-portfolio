@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const ProjectParallax = dynamic(
   () =>
-    import("@/components/ProjectParallax/projectparallax").then(
+    import("../../components/ProjectParallax/ProjectParallax").then(
       (mod) => mod.ProjectParallax
     ),
   {
@@ -37,7 +37,7 @@ const Projects = () => {
 
       <ProjectParallax />
       <ProjectCard />
-     
+
       <div className="h-10" />
     </div>
   );
